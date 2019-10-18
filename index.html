@@ -10,39 +10,64 @@
 	<div class="container">
 		<header class="main-header">
 			<div class="main-header__logo">
-				<span>стом</span>
-				<span>портал</span>
-				<p>обучение стоматологов</p>
+				<img src="img/logo.png" alt="Логотип Стоммаркета">
 			</div>
 			<div class="main-header__search"><input type="search" name="search"></div>
 			<div class="main-header__user-block"><span>Аккаунт</span></div>
 		</header>
 		<main>
 			<div class="left-block">
-				<h1>Добро пожаловать</h1>
-				<p>Заполните пару простых шагов, для комфортной работы с сервисом</p>
-				<img src="img/illustration.jpg" alt="Иллюстрация на тему обучения стоматологов">
-			</div>
-			<div class="slider">
-				<ul class="slider__list">
-					<li class="slider__item"></li>
-					<li class="slider__item"></li>
-					<li class="slider__item"></li>
-				</ul>
-			</div>
-			<button class="btn">Далее</button>
-			<div class="form-block">
-			<h2 class="form-block__title">Личные данные</h2>
-			<span>шаг 1/2</span>
-			<button class="form-block__button">Обучающий центр</button>
-			<button class="form-block__button">Слушатель</button>
-			<form method="#">
-				<label for="phone-number">Телефон</label>
-				<input type="" name="phone-number" id="phone-number">
-				<div class="form-block__user-block"><p>Войти с помощью:</p><button>Стоммаркет</button></div>
-				<p>Высможете отредактировать данную информацию позднее в своем личном кабинете</p>
-				<input type="submit" name="next" value="Далее">
-			</form>
+				<h1 class="title">Добро пожаловать</h1>
+				<p>Заполните пару простых шагов,<br>для комфортной работы с сервисом</p>
+				<div class="slider">
+					<div class="slider__control">
+						<ul class="slider__control-list">
+							<li class="slider__control-item"></li>
+							<li class="slider__control-item"></li>
+							<li class="slider__control-item"></li>
+						</ul>
+						<button class="btn">Далее</button>
+			        </div>
+			        <ul class="slider__list">
+                        <li class="slider__item">
+						    <div class="form-block">
+								<h2 class="form-block__title">Личные данные</h2>
+								<span>шаг 1/2</span>
+								<button class="form-block__button">Обучающий центр</button>
+								<button class="form-block__button">Слушатель</button>
+								<form method="#">
+									<label for="phone-number">Телефон</label>
+									<input type="" name="phone-number" id="phone-number">
+									<div class="form-block__user-block"><p>Войти с помощью:</p><button>Стоммаркет</button></div>
+									<p>Высможете отредактировать данную информацию позднее в своем личном кабинете</p>
+									<input type="submit" name="next" value="Далее">
+								</form>
+							</div>
+						</li>
+						<li class="slider__item">
+							<div class="form-block">
+								<h2 class="form-block__title">Основная информация</h2>
+								<span>шаг 2/2</span>
+								<form>
+									<div class="form-block__input-wrap">
+										<label for="name">ФИО</label>
+										<input type="text" name="name" id="name" placeholder="Пупкин Владимир Владимирович">
+									</div>
+									<div class="form-block__input-wrap">
+										<label for="occupation">Должность</label>
+										<input type="text" name="occupation" id="occupation" placeholder="Стоматолог">
+									</div>
+									<div class="form-block__input-wrap">
+										<label for="city">Город</label>
+										<input type="text" name="city" id="city" placeholder="Санкт-Петербург">
+									</div>
+									<p>Высможете отредактировать данную информацию позднее в своем личном кабинете</p>
+									<input type="submit" name="next" value="Далее">
+								</form>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</main>
 		<footer class="main-footer">

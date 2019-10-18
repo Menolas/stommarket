@@ -1,0 +1,22 @@
+.left-block {
+	position: relative;
+	padding: 36px 34px;
+	padding-bottom: 30px;
+	background-image: url("../img/illustration.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 157px;
+}
+
+.left-block h1 {
+	margin-bottom: 5px;
+	text-align: center;
+	color: $blue;
+}
+
+.left-block p {
+	margin-bottom: 466px;
+	text-align: center;
+	color: $light-gray;
+	font-size: 16px;
+	line-height: 19px;
+}
