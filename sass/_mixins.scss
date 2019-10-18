@@ -1,0 +1,36 @@
+@mixin font-base ($size, $height) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+  color: $gray;
+  font-family: $base-font-family;
+}
+
+@mixin font-decor ($size, $height) {
+	font-family: "Caveat";
+	font-weight: 400;
+	color: $lavender;
+	font-size: $size;
+	line-height: $height;
+}
+
+@mixin list-style {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin link-style {
+    display: block;
+	color: $lavender;
+	text-decoration: none;
+}
+
+@mixin element-style ($width, $height, $color) {
+	content: "";
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+	background-color: $color;
+}
