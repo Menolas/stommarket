@@ -1,3 +1,90 @@
 .form-block {
+	
+}
+
+.form-block__step {
 	display: none;
 }
+
+.form-block__title {
+	margin-bottom: 34px;
+}
+
+.form-block__button-wrap {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-bottom: 64px;
+	width: 259px;
+}
+
+.form-block__button {
+	margin: 0;
+	padding: 0;
+	width: 112px;
+	height: 104px;
+	border: none;
+	border-radius: 6px;
+	font-size: 12px;
+}
+
+.form-block__button--school {
+	padding-top: 62px;
+	padding-bottom: 18px;
+	line-height: 14px;
+	color: $gray;
+	background-color: $white;
+	border: 2px solid $blue;
+	background-image: url("../img/education-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 41px 22px;
+}
+
+.form-block__button--student {
+	padding-top: 64px;
+	padding-bottom: 20px;
+	background-color: $blue;
+	line-height: 22px;
+	color: $white;
+	background-image: url("../img/users-icon.svg");
+	background-repeat: no-repeat;
+	background-position: 40px 20px;
+	box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4);
+}
+
+.form-block__login {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 36px;
+	margin-bottom: 170px;
+	color: $middle-gray;
+}
+
+.form-block__login button {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	padding-left: 50px;
+	font-size: 14px;
+	color: #424242;
+	text-decoration: underline;
+
+	&::before {
+		content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-image: url("../img/tooth-icon.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		box-shadow: 0 0 17px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.form-block__comment {
+	display: none;
+}
+

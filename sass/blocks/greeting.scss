@@ -1,0 +1,46 @@
+.greeting {
+	padding-top: 36px;
+	padding-bottom: 43px;
+}
+
+.greeting h1 {
+	margin-bottom: 5px;
+	text-align: center;
+	color: $blue;
+}
+
+.greeting p {
+	margin-bottom: 44px;
+	text-align: center;
+	color: $light-gray;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.greeting p .greeting__desktop {
+	display: none;
+}
+
+.greeting--closed {
+	display: none;
+}
+
+@media (min-width: 1366px) {
+	.greeting {
+		width: 359px;
+	}
+
+	.greeting p {
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
+	}
+
+	.greeting p .greeting__desktop {
+	  display: inline-block;
+  }
+
+  .greeting p .greeting__mobile {
+	  display: none;
+  }
+}

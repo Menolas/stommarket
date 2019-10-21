@@ -1,5 +1,8 @@
 .slider__control {
-	
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 0 34px;
 }
 
 .slider__control-list {
@@ -14,8 +17,24 @@
 	height: 8px;
 	border-radius: 30px;
 	background-color: rgba(44, 120, 246, 0.6);
+
+	&--active {
+	  width: 24px;
+	  background-color: $blue;
+	}
 }
 
 .slider__list {
   @include list-style;
+}
+
+.slider__item {
+	position: relative;
+  display: none;
+  padding: 20px 34px;
+  background-color: #f8fafd;
+}
+
+.slider__item--shown {
+  display: block;
 }

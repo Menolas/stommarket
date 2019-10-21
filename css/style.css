@@ -64,11 +64,39 @@ input {
   width: 375px;
   background-color: #ffffff; }
 
+@media (min-width: 1366px) {
+  .container {
+    width: 1366px; } }
+
+.main-content {
+  padding-bottom: 26px; }
+
 .title {
   margin: 0;
   font-size: 24px;
   line-height: 38px;
   font-weight: 600; }
+
+.title__secondary {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: 600; }
+
+.main-header input::-webkit-input-placeholder {
+  font-size: 0; }
+
+.main-header input::-moz-placeholder {
+  font-size: 0; }
+
+/* Firefox 19+ */
+.main-header input:-moz-placeholder {
+  font-size: 0; }
+
+/* Firefox 18- */
+.main-header input:-ms-input-placeholder {
+  font-size: 0; }
 
 .main-header {
   display: flex;
@@ -125,31 +153,306 @@ input {
 .main-header__user-block span {
   font-size: 0; }
 
-.left-block {
-  position: relative;
-  padding: 36px 34px;
-  padding-bottom: 30px;
-  background-image: url("../img/illustration.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 157px; }
+@media (min-width: 1366px) {
+  .main-header {
+    padding: 16px 60px; }
+  .main-header__logo {
+    margin-top: 10px; }
+  .main-header__search input::-webkit-input-placeholder {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #909AAB; }
+  .main-header__search input::-moz-placeholder {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #909AAB; }
+  /* Firefox 19+ */
+  .main-header__search input:-moz-placeholder {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #909AAB; }
+  /* Firefox 18- */
+  .main-header__search input:-ms-input-placeholder {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #909AAB; }
+  .main-header__search {
+    margin: 0;
+    width: 513px;
+    height: 38px; }
+    .main-header__search::before {
+      top: 50%;
+      left: 10px;
+      width: 17px;
+      height: 17px;
+      background-image: url("../img/search-icon-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 17px 17px;
+      background-position: center;
+      transform: translate(0%, -50%); }
+  .main-header__search input {
+    display: block;
+    padding-left: 40px;
+    width: 513px;
+    height: 38px;
+    border: 1px solid #eaecef;
+    border-radius: 5px; }
+  .main-header__user-block {
+    margin-top: 2px;
+    width: 33px;
+    height: 33px; }
+    .main-header__user-block::before {
+      width: 33px;
+      height: 33px;
+      background-size: 33px 33px; } }
 
-.left-block h1 {
+.greeting {
+  padding-top: 36px;
+  padding-bottom: 43px; }
+
+.greeting h1 {
   margin-bottom: 5px;
   text-align: center;
   color: #2C78F6; }
 
-.left-block p {
-  margin-bottom: 466px;
+.greeting p {
+  margin-bottom: 44px;
   text-align: center;
   color: #909AAB;
   font-size: 16px;
   line-height: 19px; }
 
+.greeting p .greeting__desktop {
+  display: none; }
+
+.greeting--closed {
+  display: none; }
+
+@media (min-width: 1366px) {
+  .greeting {
+    width: 359px; }
+  .greeting p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center; }
+  .greeting p .greeting__desktop {
+    display: inline-block; }
+  .greeting p .greeting__mobile {
+    display: none; } }
+
 .main-footer {
   display: none; }
 
-.form-block {
+@media (min-width: 1366px) {
+  .main-footer {
+    display: block; } }
+
+.form-block__step {
   display: none; }
+
+.form-block__title {
+  margin-bottom: 34px; }
+
+.form-block__button-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  width: 259px; }
+
+.form-block__button {
+  margin: 0;
+  padding: 0;
+  width: 112px;
+  height: 104px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px; }
+
+.form-block__button--school {
+  padding-top: 62px;
+  padding-bottom: 18px;
+  line-height: 14px;
+  color: #30353E;
+  background-color: #ffffff;
+  border: 2px solid #2C78F6;
+  background-image: url("../img/education-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 41px 22px; }
+
+.form-block__button--student {
+  padding-top: 64px;
+  padding-bottom: 20px;
+  background-color: #2C78F6;
+  line-height: 22px;
+  color: #ffffff;
+  background-image: url("../img/users-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 40px 20px;
+  box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4); }
+
+.form-block__login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  margin-bottom: 170px;
+  color: #61656B; }
+
+.form-block__login button {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+  font-size: 14px;
+  color: #424242;
+  text-decoration: underline; }
+  .form-block__login button::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-image: url("../img/tooth-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.1); }
+
+.form-block__comment {
+  display: none; }
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #30353E;
+  font-family: "Montserrat";
+  color: #30353E; }
+
+::-moz-placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #30353E;
+  font-family: "Montserrat";
+  color: #30353E; }
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #30353E;
+  font-family: "Montserrat";
+  color: #30353E; }
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #30353E;
+  font-family: "Montserrat";
+  color: #30353E; }
+
+.form__field-wrap {
+  display: flex;
+  flex-direction: column; }
+
+.form--submit .form__field-wrap {
+  margin-bottom: 29px; }
+
+.form--submit .form__field-wrap:last-of-type {
+  margin-bottom: 0; }
+
+.form label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  line-height: 22px;
+  color: #61656B; }
+
+.form input:not([type="submit"]) {
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #61656B;
+  background-color: #f8fafd; }
+
+.form input[name="phone-number"] {
+  position: relative; }
+  .form input[name="phone-number"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 1px;
+    background-color: #45C781;
+    transform: rotate(45deg);
+    z-index: 200; }
+  .form input[name="phone-number"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #45C781;
+    transform: rotate(-45deg); }
+
+.form input[type="submit"] {
+  position: absolute;
+  right: 35px;
+  bottom: -10px; }
+
+.form__field-wrap--file {
+  flex-direction: row;
+  justify-content: space-between; }
+
+.form label[for="file"] {
+  position: relative;
+  padding-top: 80px;
+  width: 126px;
+  height: 46px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 19px;
+  color: #b8d2fc;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: #ffffff; }
+  .form label[for="file"]::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 33px;
+    width: 45px;
+    height: 45px;
+    transform: translate(-50%);
+    background-image: url("../img/photo-camera-icon.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 45px 45px; }
+
+.form input[type="file"] {
+  display: none; }
+
+.form__input-comment {
+  width: 153px;
+  font-size: 11px;
+  line-height: 18px;
+  color: #61656B; }
+
+.slider__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 34px; }
 
 .slider__control-list {
   margin: 0;
@@ -164,16 +467,25 @@ input {
   height: 8px;
   border-radius: 30px;
   background-color: rgba(44, 120, 246, 0.6); }
+  .slider__control-item--active {
+    width: 24px;
+    background-color: #2C78F6; }
 
 .slider__list {
   margin: 0;
   padding: 0;
   list-style: none; }
 
+.slider__item {
+  position: relative;
+  display: none;
+  padding: 20px 34px;
+  background-color: #f8fafd; }
+
+.slider__item--shown {
+  display: block; }
+
 .btn {
-  position: absolute;
-  right: 36px;
-  bottom: 26px;
   margin: 0;
   padding: 0;
   width: 145px;

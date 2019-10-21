@@ -3,3 +3,9 @@
 	width: 375px;
 	background-color: $white;
 }
+
+@media (min-width: 1366px) {
+	.container {
+		width: 1366px;
+	}
+}
