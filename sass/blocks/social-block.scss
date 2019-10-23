@@ -1,0 +1,39 @@
+.social-block {
+	grid-column-start: 4;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+.social-block__list {
+	@include list-style;
+	display: flex;
+}
+
+.social-block__item {
+	margin-right: 5px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.social-block__link {
+	display: block;
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: #f8fafd;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.social-block__link--insta {
+	border: 1px solid #cf446f;
+	background-image: url("../img/instagram-logo.svg");
+}
+.social-block__link--vk {
+	border: 1px solid #5b80b4;
+	background-image: url("../img/vk-social-network-logo.svg");
+}

@@ -24,6 +24,14 @@
 					<span class="greeting__mobile">для комфортной работы</span><span class="greeting__desktop">чтобы начать работу</span>с сервисом</p>
 				<img src="img/illustration-mobile.png" alt="Иллюстрация обучения стоматологов">
             </div>
+            <div class="slider-paginator">
+				<ul class="slider-paginator__list">
+					<li class="slider-paginator__item  slider-paginator__item--active"></li>
+					<li class="slider-paginator__item"></li>
+					<li class="slider-paginator__item"></li>
+				</ul>
+				<button class="btn">Далее</button>
+	        </div>
 			<div class="slider">
 			    <ul class="slider__list">
                     <li class="slider__item  slider__item--login">
@@ -34,13 +42,13 @@
 								<button class="form-block__button  form-block__button--school">Обучающий центр</button>
 								<button class="form-block__button  form-block__button--student">Слушатель</button>
 						    </div>
-							<form class="form" method="#" action="#">
+							<form class="form  form-login" method="#" action="#">
 								<div class="form__field-wrap">
 									<label for="phone-number">Телефон<sup>*</sup></label>
 									<input type="" name="phone-number" id="phone-number" placeholder="+7(911)725-36-11">
 								</div>
 								<div class="form-block__login"><p>Войти с помощью:</p><button>Стоммаркет</button></div>
-								<p class="form-block__comment">Высможете отредактировать данную информацию позднее в своем личном кабинете</p>
+								<p class="form-block__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
 								<input class="btn" type="submit" name="next" value="Далее">
 							</form>
 						</div>
@@ -49,7 +57,7 @@
 						<div class="form-block">
 							<h2 class="form-block__title  title__secondary">Основная информация</h2>
 							<span class="form-block__step">шаг 2/2</span>
-							<form class="form  form--submit" method="#">
+							<form class="form  form-submit" method="#">
 								<div class="form__field-wrap  form__field-wrap--file">
 									<label for="file">Загрузить фото</label>
 									<input type="file" name="file" id="file">
@@ -71,19 +79,12 @@
 									<input type="text" name="city" id="city" placeholder="Санкт-Петербург">
 								</div>
 								<p class="form-block__comment">Вы cможете отредактировать данную информацию позднее в своем личном кабинете</p>
-								<input type="submit" name="next" value="Далее">
+								<input type="reset" name="reset" value="Назад">
+								<input class="btn" type="submit" name="next" value="Регистрация">
 							</form>
 						</div>
 					</li>
 				</ul>
-				<div class="slider__control">
-					<ul class="slider__control-list">
-						<li class="slider__control-item  slider__control-item--active"></li>
-						<li class="slider__control-item"></li>
-						<li class="slider__control-item"></li>
-					</ul>
-					<button class="btn">Далее</button>
-		        </div>
 			</div>
 		</main>
 		<footer class="main-footer">
@@ -104,12 +105,12 @@
 				</ul>
 			</nav>
 			<div class="social-block">
-				<ul social-block__list>
+				<ul class="social-block__list">
 					<li class="social-block__item">
-						<a href="#" class="social-block__link">Ссылка на наш Инстаграм</a>
+						<a href="#" class="social-block__link  social-block__link--insta">Ссылка на наш Инстаграм</a>
 					</li>
 					<li class="social-block__item">
-						<a href="#" class="social-block__link">Ссылка на нашу страницу "В Контакте"</a>
+						<a href="#" class="social-block__link  social-block__link--vk">Ссылка на нашу страницу "В Контакте"</a>
 					</li>
 				</ul>
 			</div>

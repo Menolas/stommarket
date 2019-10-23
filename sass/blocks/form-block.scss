@@ -1,7 +1,3 @@
-.form-block {
-	
-}
-
 .form-block__step {
 	display: none;
 }
@@ -87,4 +83,61 @@
 .form-block__comment {
 	display: none;
 }
+
+@media (min-width: 1366px) {
+  .form-block__step {
+  	display: block;
+  	font-size: 12px;
+  	line-height: 38px;
+  	font-weight: 600;
+  	color: $blue;
+  }
+
+  .form-block__button-wrap {
+  	justify-content: flex-start;
+  	margin-bottom: 47px;
+  	width: 100%;
+  }
+
+  .form-block__button {
+  	margin-right: 59px;
+  	width: 200px;
+  	height: 142px;
+  	font-size: 14px;
+  	line-height: 22px;
+
+  	&:last-of-type {
+  		margin-right: 0;
+  	}
+  }
+
+  .form-block__button--school {
+  	background-size: 40px 40px;
+  	background-position: center 32px;
+  }
+
+  .form-block__button--student {
+  	background-size: 44px 40px;
+  	background-position: center 33px;
+  }
+
+  .form-block__login {
+  	justify-content: flex-start;
+  	margin-top: 51px;
+  	margin-bottom: 54px;
+  }
+
+  .form-block__login p {
+  	margin-right: 30px;
+  }
+
+  .form-block__comment {
+  	display: block;
+  	width: 278px;
+  	font-size: 10px;
+  	line-height: 13px;
+  	color: #c4c4c4;
+  }
+}
+
 

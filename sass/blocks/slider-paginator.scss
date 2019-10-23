@@ -1,0 +1,29 @@
+.slider-paginator {
+	position: absolute;
+	bottom: 26px;
+	left: 50%;
+	width: 307px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	transform: translate(-50%);
+}
+
+.slider-paginator__list {
+	@include list-style;
+	display: flex;
+	justify-content: space-between;
+	width: 70px;
+}
+
+.slider-paginator__item {
+	width: 8px;
+	height: 8px;
+	border-radius: 30px;
+	background-color: rgba(44, 120, 246, 0.6);
+
+	&--active {
+	  width: 24px;
+	  background-color: $blue;
+	}
+}

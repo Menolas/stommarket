@@ -1,34 +1,26 @@
 ::-webkit-input-placeholder {
   @include font-base(16px, 22px);
-  color: $gray;
+  color: #c4c4c4;
 }
 
 ::-moz-placeholder {
   @include font-base(16px, 22px);
-  color: $gray;
+  color: #c4c4c4;
  }/* Firefox 19+ */
 
 :-moz-placeholder {
   @include font-base(16px, 22px);
-  color: $gray;
+  color: #c4c4c4;
  }/* Firefox 18- */
 
 :-ms-input-placeholder {
   @include font-base(16px, 22px);
-  color: $gray;
+  color: #c4c4c4;
 }
 
 .form__field-wrap {
 	display: flex;
 	flex-direction: column;
-}
-
-.form--submit .form__field-wrap {
-	margin-bottom: 29px;
-}
-
-.form--submit .form__field-wrap:last-of-type {
-	margin-bottom: 0;
 }
 
 .form label {
@@ -71,12 +63,30 @@
     background-color: #45C781;
     transform: rotate(-45deg);
   }
+
+  &::-webkit-input-placeholder {
+    color: $gray;
+  }
+
+  &::-moz-placeholder {
+    color: $gray;
+  }/* Firefox 19+ */
+
+	&:-moz-placeholder {
+	  color: $gray;
+	}/* Firefox 18- */
+
+	&:-ms-input-placeholder {
+	  color: $gray;
+	}
+}
+
+.form input[type="reset"] {
+	display: none;
 }
 
 .form input[type="submit"] {
-	position: absolute;
-	right: 35px;
-	bottom: -10px;
+	margin-left: auto;
 }
 
 .form__field-wrap--file {
@@ -121,5 +131,45 @@
 	font-size: 11px;
 	line-height: 18px;
 	color: $middle-gray;
+}
+
+@media (min-width: 1366px) {
+	.form label {
+		margin-bottom: 8px;
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.form input[name="phone-number"] {
+	position: relative;
+
+	  &::before {
+			display: none;
+	  }
+
+	  &::after {
+			display: none;
+	  }
+
+	  &::-webkit-input-placeholder {
+	    color: #c4c4c4;
+	  }
+
+	  &::-moz-placeholder {
+	    color: #c4c4c4;
+	  }/* Firefox 19+ */
+
+		&:-moz-placeholder {
+		  color: #c4c4c4;
+		 }/* Firefox 18- */
+
+		&:-ms-input-placeholder {
+		  color: #c4c4c4;
+		}
+  }
+
+  .form input[type="reset"] {
+	  display: block;
+  }
 }
 

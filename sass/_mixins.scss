@@ -6,14 +6,6 @@
   font-family: $base-font-family;
 }
 
-@mixin font-decor ($size, $height) {
-	font-family: "Caveat";
-	font-weight: 400;
-	color: $lavender;
-	font-size: $size;
-	line-height: $height;
-}
-
 @mixin list-style {
 	margin: 0;
 	padding: 0;
@@ -22,7 +14,7 @@
 
 @mixin link-style {
     display: block;
-	color: $lavender;
+	color: inherit;
 	text-decoration: none;
 }
 

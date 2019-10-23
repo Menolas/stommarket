@@ -1,6 +1,6 @@
 .greeting {
 	padding-top: 36px;
-	padding-bottom: 43px;
+	padding-bottom: 114px;
 }
 
 .greeting h1 {
@@ -27,6 +27,9 @@
 
 @media (min-width: 1366px) {
 	.greeting {
+		display: block;
+		grid-column-start: 1;
+		grid-column-end: 1;
 		width: 359px;
 	}
 
