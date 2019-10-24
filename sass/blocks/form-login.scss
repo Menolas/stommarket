@@ -1,0 +1,74 @@
+.form-login input[name="phone-number"] {
+	
+
+  &::-webkit-input-placeholder {
+    color: $gray;
+  }
+
+  &::-moz-placeholder {
+    color: $gray;
+  }/* Firefox 19+ */
+
+	&:-moz-placeholder {
+	  color: $gray;
+	}/* Firefox 18- */
+
+	&:-ms-input-placeholder {
+	  color: $gray;
+	}
+}
+
+.form-login .form__field-wrap {
+	position: relative;
+
+  &::before {
+	content: "";
+    position: absolute;
+    bottom: 13px;
+    right: 9px;
+    width: 5px;
+    height: 2px;
+    background-color: #45C781;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    width: 12px;
+    height: 2px;
+    background-color: #45C781;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 1366px)  {
+	.form input[name="phone-number"] {
+
+	  &::before {
+			display: none;
+	  }
+
+	  &::after {
+			display: none;
+	  }
+
+	  &::-webkit-input-placeholder {
+	    color: #c4c4c4;
+	  }
+
+	  &::-moz-placeholder {
+	    color: #c4c4c4;
+	  }/* Firefox 19+ */
+
+		&:-moz-placeholder {
+		  color: #c4c4c4;
+		 }/* Firefox 18- */
+
+		&:-ms-input-placeholder {
+		  color: #c4c4c4;
+		}
+  }
+}

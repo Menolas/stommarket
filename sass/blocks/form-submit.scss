@@ -5,3 +5,51 @@
 .form-submit .form__field-wrap:last-of-type {
 	margin-bottom: 0;
 }
+
+.form-submit .form__field-wrap--file {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form-submit label[for="file"] {
+	position: relative;
+	padding-top: 80px;
+	width: 126px;
+	height: 46px;
+	text-align: center;
+	font-size: 9px;
+	line-height: 19px;
+	color: #b8d2fc;
+	text-transform: uppercase;
+	border-radius: 20px;
+	background-color: $white;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 33px;
+		width: 45px;
+		height: 45px;
+		transform: translate(-50%);
+		background-image: url("../img/photo-camera-icon.png");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: 45px 45px;
+	}
+}
+
+.form-submit input[type="file"] {
+	display: none;
+}
+
+.form-submit .form__input-comment p {
+	margin-bottom: 20px;
+}
+
+.form-submit input[type="submit"] {
+	margin-top: 71px;
+	color: #a4aab3;
+	background-color: #eaecef;
+}

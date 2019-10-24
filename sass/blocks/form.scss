@@ -18,6 +18,10 @@
   color: #c4c4c4;
 }
 
+.form {
+	padding-bottom: 26px;
+}
+
 .form__field-wrap {
 	display: flex;
 	flex-direction: column;
@@ -25,60 +29,17 @@
 
 .form label {
 	display: inline-block;
-	margin-bottom: 5px;
   font-size: 10px;
   line-height: 22px;
   color: $middle-gray;
 }
 
 .form input:not([type="submit"]) {
-	padding-bottom: 8px;
+	padding-bottom: 11px;
+	padding-top: 8px;
 	border: none;
 	border-bottom: 1px solid $middle-gray;
 	background-color: #f8fafd;
-}
-
-.form input[name="phone-number"] {
-	position: relative;
-
-  &::before {
-		content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 6px;
-    height: 1px;
-    background-color: #45C781;
-    transform: rotate(45deg);
-    z-index: 200;
-  }
-
-  &::after {
-		content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 1px;
-    background-color: #45C781;
-    transform: rotate(-45deg);
-  }
-
-  &::-webkit-input-placeholder {
-    color: $gray;
-  }
-
-  &::-moz-placeholder {
-    color: $gray;
-  }/* Firefox 19+ */
-
-	&:-moz-placeholder {
-	  color: $gray;
-	}/* Firefox 18- */
-
-	&:-ms-input-placeholder {
-	  color: $gray;
-	}
 }
 
 .form input[type="reset"] {
@@ -87,43 +48,6 @@
 
 .form input[type="submit"] {
 	margin-left: auto;
-}
-
-.form__field-wrap--file {
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.form label[for="file"] {
-	position: relative;
-	padding-top: 80px;
-	width: 126px;
-	height: 46px;
-	text-align: center;
-	font-size: 9px;
-	line-height: 19px;
-	color: #b8d2fc;
-	text-transform: uppercase;
-	border-radius: 20px;
-	background-color: $white;
-
-	&::before {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 33px;
-		width: 45px;
-		height: 45px;
-		transform: translate(-50%);
-		background-image: url("../img/photo-camera-icon.png");
-		background-repeat: no-repeat;
-		background-position: top;
-		background-size: 45px 45px;
-	}
-}
-
-.form input[type="file"] {
-	display: none;
 }
 
 .form__input-comment {
@@ -139,34 +63,6 @@
 		font-size: 12px;
 		font-weight: 500;
 	}
-
-	.form input[name="phone-number"] {
-	position: relative;
-
-	  &::before {
-			display: none;
-	  }
-
-	  &::after {
-			display: none;
-	  }
-
-	  &::-webkit-input-placeholder {
-	    color: #c4c4c4;
-	  }
-
-	  &::-moz-placeholder {
-	    color: #c4c4c4;
-	  }/* Firefox 19+ */
-
-		&:-moz-placeholder {
-		  color: #c4c4c4;
-		 }/* Firefox 18- */
-
-		&:-ms-input-placeholder {
-		  color: #c4c4c4;
-		}
-  }
 
   .form input[type="reset"] {
 	  display: block;

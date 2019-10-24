@@ -1,8 +1,8 @@
 .slider-paginator {
 	position: absolute;
-	bottom: 26px;
+	bottom: 45px;
 	left: 50%;
-	width: 307px;
+	width: 305px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -11,19 +11,31 @@
 
 .slider-paginator__list {
 	@include list-style;
+	padding-bottom: 3px;
 	display: flex;
-	justify-content: space-between;
-	width: 70px;
 }
 
 .slider-paginator__item {
+	position: relative;
+	margin-right: 8px;
+	display: block;
 	width: 8px;
 	height: 8px;
 	border-radius: 30px;
 	background-color: rgba(44, 120, 246, 0.6);
 
-	&--active {
-	  width: 24px;
-	  background-color: $blue;
+	&:last-of-type {
+		margin-right: 0;
 	}
+}
+
+.slider-paginator__item--active {
+  width: 24px;
+  height: 8px;
+  background-color: $blue;
+  border-radius: 30px;
+}
+
+.slider-paginator__btn {
+	margin-top: 5px;
 }
