@@ -436,7 +436,9 @@ input {
   font-size: 14px;
   line-height: 22px;
   color: #424242;
-  text-decoration: underline; }
+  text-decoration: underline;
+  border: none;
+  background-color: transparent; }
   .form-block__login button::before {
     content: "";
     position: absolute;

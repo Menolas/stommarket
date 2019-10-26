@@ -65,6 +65,8 @@
 	line-height: 22px;
 	color: #424242;
 	text-decoration: underline;
+	border: none;
+	background-color: transparent;
 
 	&::before {
 		content: "";
