@@ -234,7 +234,7 @@ input {
 
 .greeting {
   padding-top: 38px;
-  padding-bottom: 114px; }
+  padding-bottom: 95px; }
 
 .greeting h1 {
   margin-bottom: 2px;
@@ -271,7 +271,7 @@ input {
 
 .slider-paginator {
   position: absolute;
-  bottom: 45px;
+  bottom: 26px;
   left: 50%;
   width: 305px;
   display: flex;
@@ -287,7 +287,6 @@ input {
   display: flex; }
 
 .slider-paginator__item {
-  position: relative;
   margin-right: 8px;
   display: block;
   width: 8px;
@@ -296,6 +295,19 @@ input {
   background-color: rgba(44, 120, 246, 0.6); }
   .slider-paginator__item:last-of-type {
     margin-right: 0; }
+
+.slider-paginator__item--strange-unknowing-blue-point {
+  position: relative;
+  margin-right: 24px; }
+  .slider-paginator__item--strange-unknowing-blue-point::before {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 30px;
+    background-color: rgba(44, 120, 246, 0.6); }
 
 .slider-paginator__item--active {
   width: 24px;
@@ -420,8 +432,9 @@ input {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-left: 50px;
+  padding-left: 55px;
   font-size: 14px;
+  line-height: 22px;
   color: #424242;
   text-decoration: underline; }
   .form-block__login button::before {
@@ -512,9 +525,6 @@ input {
   font-family: "Montserrat";
   color: #c4c4c4; }
 
-.form {
-  padding-bottom: 26px; }
-
 .form__field-wrap {
   display: flex;
   flex-direction: column; }
@@ -526,7 +536,7 @@ input {
   color: #61656B; }
 
 .form input:not([type="submit"]) {
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   padding-top: 8px;
   border: none;
   border-bottom: 1px solid #61656B;
@@ -611,13 +621,14 @@ input {
 .form-submit .form__field-wrap--file {
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 26px; }
 
 .form-submit label[for="file"] {
   position: relative;
-  padding-top: 80px;
+  padding-top: 73px;
   width: 126px;
-  height: 46px;
+  height: 53px;
   text-align: center;
   font-size: 9px;
   line-height: 19px;
@@ -629,7 +640,7 @@ input {
     content: "";
     position: absolute;
     left: 50%;
-    top: 33px;
+    top: 26px;
     width: 45px;
     height: 45px;
     transform: translate(-50%);
@@ -641,16 +652,21 @@ input {
 .form-submit input[type="file"] {
   display: none; }
 
+.form-submit input:not[type="submit"] {
+  padding-top: 9px; }
+
 .form-submit .form__input-comment p {
+  margin-top: 21px;
   margin-bottom: 20px; }
 
 .form-submit input[type="submit"] {
-  margin-top: 71px;
+  margin-top: 69px;
   color: #a4aab3;
   background-color: #eaecef; }
 
 .slider {
-  background-color: #f8fafd; }
+  background-color: #f8fafd;
+  padding-bottom: 26px; }
 
 .slider__list {
   margin: 0;
@@ -664,6 +680,9 @@ input {
 
 .slider__item--shown {
   display: block; }
+
+.slider__item--submit .slider__item-title {
+  margin-bottom: 27px; }
 
 @media (min-width: 1366px) {
   .slider {

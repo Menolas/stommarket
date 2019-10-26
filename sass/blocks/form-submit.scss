@@ -10,13 +10,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 26px;
 }
 
 .form-submit label[for="file"] {
 	position: relative;
-	padding-top: 80px;
+	padding-top: 73px;
 	width: 126px;
-	height: 46px;
+	height: 53px;
 	text-align: center;
 	font-size: 9px;
 	line-height: 19px;
@@ -29,7 +30,7 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: 33px;
+		top: 26px;
 		width: 45px;
 		height: 45px;
 		transform: translate(-50%);
@@ -44,12 +45,17 @@
 	display: none;
 }
 
+.form-submit input:not[type="submit"] {
+	padding-top: 9px;
+}
+
 .form-submit .form__input-comment p {
+	margin-top: 21px;
 	margin-bottom: 20px;
 }
 
 .form-submit input[type="submit"] {
-	margin-top: 71px;
+	margin-top: 69px;
 	color: #a4aab3;
 	background-color: #eaecef;
 }

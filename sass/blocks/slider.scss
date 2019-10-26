@@ -1,5 +1,6 @@
 .slider {
 	background-color: #f8fafd;
+	padding-bottom: 26px;
 }
 
 .slider__list {
@@ -14,6 +15,10 @@
 
 .slider__item--shown {
   display: block;
+}
+
+.slider__item--submit .slider__item-title {
+	margin-bottom: 27px;
 }
 
 @media (min-width: 1366px) {

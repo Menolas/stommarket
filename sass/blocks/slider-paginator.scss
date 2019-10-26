@@ -1,6 +1,6 @@
 .slider-paginator {
 	position: absolute;
-	bottom: 45px;
+	bottom: 26px;
 	left: 50%;
 	width: 305px;
 	display: flex;
@@ -16,7 +16,6 @@
 }
 
 .slider-paginator__item {
-	position: relative;
 	margin-right: 8px;
 	display: block;
 	width: 8px;
@@ -27,6 +26,22 @@
 	&:last-of-type {
 		margin-right: 0;
 	}
+}
+
+.slider-paginator__item--strange-unknowing-blue-point {
+	position: relative;
+	margin-right: 24px;
+
+  &::before {
+	content: "";
+	position: absolute;
+	right: -16px;
+	top: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: 30px;
+	background-color: rgba(44, 120, 246, 0.6);
+  }
 }
 
 .slider-paginator__item--active {
