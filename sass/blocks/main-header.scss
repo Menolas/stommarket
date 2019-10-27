@@ -88,6 +88,14 @@
 
 	.main-header__logo {
 		margin-top: 10px;
+		padding: 0;
+		width: 118px;
+		height: 23px;
+	}
+
+	.main-header__logo img {
+		width: 118px;
+		height: 23px;
 	}
 
 	.main-header__search input::-webkit-input-placeholder {
@@ -120,12 +128,13 @@
 
 	.main-header__search {
 		margin: 0;
+		margin-left: auto;
 		width: 513px;
 		height: 38px;
 
 		&::before {
 		top: 50%;
-		left: 10px;
+		left: 13px;
 		width: 17px;
 	  height: 17px;
 		background-image: url("../img/search-icon-desktop.svg");
@@ -147,6 +156,7 @@
 
 	.main-header__user-block {
 		margin-top: 2px;
+		margin-left: 402px;
 	  width: 35px;
 	  height: 35px;
 

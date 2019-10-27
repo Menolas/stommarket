@@ -105,6 +105,11 @@ input {
   text-transform: uppercase;
   font-weight: 700; }
 
+@media (min-width: 1366px) {
+  .btn {
+    color: #a4aab3;
+    background-color: #eaecef; } }
+
 .main-header input::-webkit-input-placeholder {
   font-size: 0; }
 
@@ -179,7 +184,13 @@ input {
   .main-header {
     padding: 16px 60px; }
   .main-header__logo {
-    margin-top: 10px; }
+    margin-top: 10px;
+    padding: 0;
+    width: 118px;
+    height: 23px; }
+  .main-header__logo img {
+    width: 118px;
+    height: 23px; }
   .main-header__search input::-webkit-input-placeholder {
     font-size: 13px;
     line-height: 22px;
@@ -204,11 +215,12 @@ input {
     color: #909AAB; }
   .main-header__search {
     margin: 0;
+    margin-left: auto;
     width: 513px;
     height: 38px; }
     .main-header__search::before {
       top: 50%;
-      left: 10px;
+      left: 13px;
       width: 17px;
       height: 17px;
       background-image: url("../img/search-icon-desktop.svg");
@@ -225,6 +237,7 @@ input {
     border-radius: 5px; }
   .main-header__user-block {
     margin-top: 2px;
+    margin-left: 402px;
     width: 35px;
     height: 35px; }
     .main-header__user-block::before {
@@ -236,7 +249,7 @@ input {
   padding-top: 38px;
   padding-bottom: 95px; }
 
-.greeting h1 {
+.greeting__title {
   margin-bottom: 2px;
   text-align: center;
   color: #2C78F6; }
@@ -248,26 +261,38 @@ input {
   font-size: 16px;
   line-height: 19px; }
 
-.greeting p .greeting__desktop {
+.greeting p .greeting__adaptive {
   display: none; }
 
 .greeting--closed {
   display: none; }
+
+.greeting__picture {
+  width: 375px;
+  height: 364px; }
 
 @media (min-width: 1366px) {
   .greeting {
     display: block;
     grid-column-start: 1;
     grid-column-end: 1;
+    padding-top: 45px;
+    padding-bottom: 0;
     width: 359px; }
+  .greeting__title {
+    margin-bottom: 18px; }
   .greeting p {
+    margin-bottom: 28px;
     font-size: 14px;
     line-height: 18px;
     text-align: center; }
-  .greeting p .greeting__desktop {
+  .greeting p .greeting__adaptive {
     display: inline-block; }
   .greeting p .greeting__mobile {
-    display: none; } }
+    display: none; }
+  .greeting__picture {
+    width: 462px;
+    height: 416px; } }
 
 .slider-paginator {
   position: absolute;
@@ -317,6 +342,10 @@ input {
 
 .slider-paginator__btn {
   margin-top: 5px; }
+
+@media (min-width: 1366px) {
+  .slider-paginator {
+    display: none; } }
 
 .main-footer {
   display: none; }
@@ -456,15 +485,24 @@ input {
   display: none; }
 
 @media (min-width: 1366px) {
+  .form-block {
+    position: relative; }
+  .form-block__title {
+    margin-bottom: 27px;
+    text-align: left; }
   .form-block__step {
     display: block;
+    position: absolute;
+    top: -12px;
+    right: 0;
     font-size: 12px;
     line-height: 38px;
     font-weight: 600;
-    color: #2C78F6; }
+    color: #2C78F6;
+    text-transform: uppercase; }
   .form-block__button-wrap {
     justify-content: flex-start;
-    margin-bottom: 47px;
+    margin-bottom: 44px;
     width: 100%; }
   .form-block__button {
     margin-right: 59px;
@@ -475,19 +513,32 @@ input {
     .form-block__button:last-of-type {
       margin-right: 0; }
   .form-block__button--school {
+    padding-top: 77px;
     background-size: 40px 40px;
     background-position: center 32px; }
   .form-block__button--student {
+    padding-top: 78px;
     background-size: 44px 40px;
     background-position: center 33px; }
   .form-block__login {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
     justify-content: flex-start;
-    margin-top: 51px;
+    margin-top: 48px;
     margin-bottom: 54px; }
   .form-block__login p {
-    margin-right: 30px; }
+    margin-right: 20px; }
+  .form-block__login button::before {
+    top: -7px;
+    left: 4px; }
   .form-block__comment {
     display: block;
+    grid-row-start: 3;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 1;
     width: 278px;
     font-size: 10px;
     line-height: 13px;
@@ -561,6 +612,8 @@ input {
     margin-bottom: 8px;
     font-size: 12px;
     font-weight: 500; }
+  .form input:not([type="submit"]) {
+    padding-top: 6px; }
   .form input[type="reset"] {
     display: block; } }
 
@@ -598,21 +651,35 @@ input {
     transform: rotate(-45deg); }
 
 @media (min-width: 1366px) {
-  .form input[name="phone-number"] {
+  .form-login {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto; }
+  .form-login .form__field-wrap {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: -1; }
+    .form-login .form__field-wrap::before {
+      display: none; }
+    .form-login .form__field-wrap::after {
+      display: none; }
+  .form-login input[name="phone-number"] {
     /* Firefox 19+ */
     /* Firefox 18- */ }
-    .form input[name="phone-number"]::before {
-      display: none; }
-    .form input[name="phone-number"]::after {
-      display: none; }
-    .form input[name="phone-number"]::-webkit-input-placeholder {
+    .form-login input[name="phone-number"]::-webkit-input-placeholder {
       color: #c4c4c4; }
-    .form input[name="phone-number"]::-moz-placeholder {
+    .form-login input[name="phone-number"]::-moz-placeholder {
       color: #c4c4c4; }
-    .form input[name="phone-number"]:-moz-placeholder {
+    .form-login input[name="phone-number"]:-moz-placeholder {
       color: #c4c4c4; }
-    .form input[name="phone-number"]:-ms-input-placeholder {
-      color: #c4c4c4; } }
+    .form-login input[name="phone-number"]:-ms-input-placeholder {
+      color: #c4c4c4; }
+  .form-login__btn {
+    grid-row-start: 3;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: -1; } }
 
 .form-submit .form__field-wrap {
   margin-bottom: 29px; }
@@ -691,11 +758,12 @@ input {
     grid-column-start: 2;
     grid-column-end: -1;
     padding-right: 258px;
-    padding-left: 94px; }
+    padding-left: 94px;
+    padding-top: 48px; }
+  .slider__item {
+    padding: 0; }
   .slider__item--login {
-    display: block; }
-  .slider__control {
-    display: none; } }
+    display: block; } }
 
 .footer-menu {
   grid-column-start: 1;

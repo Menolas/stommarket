@@ -19,10 +19,16 @@
 		</header>
 		<main class="main-content">
 			<div class="greeting">
-				<h1 class="title">Добро пожаловать</h1>
+				<h1 class="greeting__title  title">Добро пожаловать</h1>
 				<p>Заполните пару простых шагов,<br>
-					<span class="greeting__mobile">для комфортной работы</span><span class="greeting__desktop">чтобы начать работу</span>с сервисом</p>
-				<img src="img/illustration-mobile.png" alt="Иллюстрация обучения стоматологов">
+					<span class="greeting__mobile">для комфортной работы</span><span class="greeting__adaptive">чтобы начать работу</span>с сервисом</p>
+				<div class="greeting__picture">
+					<picture>
+	                  <source media="(min-width: 1920px)" srcset="img/illustration-wide.jpg">
+	                  <source media="(min-width: 1366px)" srcset="img/illustration-adaptive.jpg">
+	                  <img src="img/illustration-mobile.jpg" alt="Иллюстрация обучения стоматологов">
+	                </picture>
+	            </div>
             </div>
             <div class="slider-paginator">
 				<ul class="slider-paginator__list">
@@ -37,7 +43,7 @@
                     <li class="slider__item  slider__item--login">
 					    <div class="form-block">
 							<h2 class="form-block__title  title__secondary">Личные данные</h2>
-							<span class="form-block__step">шаг 1/2</span>
+							<span class="form-block__step"><pre>шаг 1/2</pre></span>
 							<div class="form-block__button-wrap">
 								<button class="form-block__button  form-block__button--school">Обучающий центр</button>
 								<button class="form-block__button  form-block__button--student">Слушатель</button>
@@ -49,7 +55,7 @@
 								</div>
 								<div class="form-block__login"><p>войти с помощью:</p><button>Стоммаркет</button></div>
 								<p class="form-block__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
-								<input class="btn" type="submit" name="next" value="Далее">
+								<input class="form-login__btn  btn" type="submit" name="next" value="Далее">
 							</form>
 						</div>
 					</li>

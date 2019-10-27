@@ -60,6 +60,10 @@
 		font-weight: 500;
 	}
 
+	.form input:not([type="submit"]) {
+		padding-top: 6px;
+	}
+
   .form input[type="reset"] {
 	  display: block;
   }

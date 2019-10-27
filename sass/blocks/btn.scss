@@ -13,3 +13,10 @@
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
+@media (min-width: 1366px) {
+	.btn {
+		color: #a4aab3;
+		background-color: #eaecef;
+	}
+}

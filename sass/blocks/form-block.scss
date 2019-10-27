@@ -88,17 +88,30 @@
 }
 
 @media (min-width: 1366px) {
+	.form-block {
+		position: relative;
+	}
+
+	.form-block__title {
+		margin-bottom: 27px;
+		text-align: left;
+	}
+
   .form-block__step {
   	display: block;
+  	position: absolute;
+  	top: -12px;
+  	right: 0;
   	font-size: 12px;
   	line-height: 38px;
   	font-weight: 600;
   	color: $blue;
+  	text-transform: uppercase;
   }
 
   .form-block__button-wrap {
   	justify-content: flex-start;
-  	margin-bottom: 47px;
+  	margin-bottom: 44px;
   	width: 100%;
   }
 
@@ -115,27 +128,45 @@
   }
 
   .form-block__button--school {
+  	padding-top: 77px;
   	background-size: 40px 40px;
   	background-position: center 32px;
   }
 
   .form-block__button--student {
+  	padding-top: 78px;
   	background-size: 44px 40px;
   	background-position: center 33px;
   }
 
   .form-block__login {
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	grid-column-start: 1;
+  	grid-column-end: -1;
   	justify-content: flex-start;
-  	margin-top: 51px;
+  	margin-top: 48px;
   	margin-bottom: 54px;
   }
 
   .form-block__login p {
-  	margin-right: 30px;
+  	margin-right: 20px;
+  }
+
+  .form-block__login button {
+
+  	&::before {
+  	top: -7px;
+  	left: 4px;
+    }
   }
 
   .form-block__comment {
   	display: block;
+  	grid-row-start: 3;
+  	grid-row-end: -1;
+  	grid-column-start: 1;
+  	grid-column-end: 1;
   	width: 278px;
   	font-size: 10px;
   	line-height: 13px;

@@ -27,14 +27,15 @@
 		grid-column-end: -1;
 		padding-right: 258px;
 		padding-left: 94px;
+		padding-top: 48px;
+	}
+
+	.slider__item {
+		padding: 0;
 	}
 
   .slider__item--login {
   	display: block;
-  }
-
-  .slider__control {
-  	display: none;
   }
 }
 

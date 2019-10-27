@@ -45,16 +45,29 @@
 }
 
 @media (min-width: 1366px)  {
-	.form input[name="phone-number"] {
+	.form-login {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto auto;
+	}
 
-	  &::before {
+	.form-login .form__field-wrap {
+		grid-row-start: 1;
+		grid-row-end: 1;
+		grid-column-start: 1;
+		grid-column-end: -1;
+
+		&::before {
+			display: none;
+		}
+
+		&::after {
 			display: none;
 	  }
+	}
 
-	  &::after {
-			display: none;
-	  }
-
+	.form-login input[name="phone-number"] {
+		
 	  &::-webkit-input-placeholder {
 	    color: #c4c4c4;
 	  }
@@ -70,5 +83,12 @@
 		&:-ms-input-placeholder {
 		  color: #c4c4c4;
 		}
+  }
+
+  .form-login__btn {
+  	grid-row-start: 3;
+		grid-row-end: -1;
+		grid-column-start: 2;
+		grid-column-end: -1;
   }
 }

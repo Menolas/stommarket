@@ -54,3 +54,9 @@
 .slider-paginator__btn {
 	margin-top: 5px;
 }
+
+@media (min-width: 1366px) {
+	.slider-paginator {
+		display: none;
+	}
+}

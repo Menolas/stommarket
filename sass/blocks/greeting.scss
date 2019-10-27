@@ -3,7 +3,7 @@
 	padding-bottom: 95px;
 }
 
-.greeting h1 {
+.greeting__title {
 	margin-bottom: 2px;
 	text-align: center;
 	color: $blue;
@@ -17,7 +17,7 @@
 	line-height: 19px;
 }
 
-.greeting p .greeting__desktop {
+.greeting p .greeting__adaptive {
 	display: none;
 }
 
@@ -25,25 +25,42 @@
 	display: none;
 }
 
+.greeting__picture {
+	width: 375px;
+	height: 364px;
+}
+
 @media (min-width: 1366px) {
 	.greeting {
 		display: block;
 		grid-column-start: 1;
 		grid-column-end: 1;
+		padding-top: 45px;
+		padding-bottom: 0;
 		width: 359px;
 	}
 
+	.greeting__title {
+		margin-bottom: 18px;
+	}
+
 	.greeting p {
+		margin-bottom: 28px;
 		font-size: 14px;
 		line-height: 18px;
 		text-align: center;
 	}
 
-	.greeting p .greeting__desktop {
+	.greeting p .greeting__adaptive {
 	  display: inline-block;
   }
 
   .greeting p .greeting__mobile {
 	  display: none;
+  }
+
+  .greeting__picture {
+  	width: 462px;
+  	height: 416px;
   }
 }
