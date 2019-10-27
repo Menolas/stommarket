@@ -1,6 +1,5 @@
 .greeting {
 	padding-top: 38px;
-	padding-bottom: 95px;
 }
 
 .greeting__title {
@@ -21,23 +20,31 @@
 	display: none;
 }
 
-.greeting--closed {
-	display: none;
-}
-
 .greeting__picture {
+	margin-bottom: 25px;
 	width: 375px;
 	height: 364px;
 }
 
+.greeting__btn {
+	margin-left: auto;
+	margin-right: 36px;
+}
+
 @media (min-width: 1366px) {
 	.greeting {
-		display: block;
 		grid-column-start: 1;
 		grid-column-end: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		padding-top: 45px;
 		padding-bottom: 0;
 		width: 359px;
+	}
+
+	.greeting__btn {
+		display: none;
 	}
 
 	.greeting__title {
@@ -60,6 +67,7 @@
   }
 
   .greeting__picture {
+  	margin-bottom: 0;
   	width: 462px;
   	height: 416px;
   }

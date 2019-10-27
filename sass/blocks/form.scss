@@ -30,7 +30,7 @@
   color: $middle-gray;
 }
 
-.form input:not([type="submit"]) {
+.form input:not(.btn) {
 	padding-bottom: 10px;
 	padding-top: 8px;
 	border: none;
@@ -46,22 +46,20 @@
 	margin-left: auto;
 }
 
-.form__input-comment {
-	width: 153px;
-	font-size: 11px;
-	line-height: 18px;
-	color: $middle-gray;
-}
-
 @media (min-width: 1366px) {
+	.form__field-wrap {
+		width: 655px;
+	}
+
 	.form label {
 		margin-bottom: 8px;
 		font-size: 12px;
 		font-weight: 500;
 	}
 
-	.form input:not([type="submit"]) {
+	.form input:not(.btn) {
 		padding-top: 6px;
+		width: 655px;
 	}
 
   .form input[type="reset"] {

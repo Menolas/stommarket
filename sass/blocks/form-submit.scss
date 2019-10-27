@@ -31,13 +31,13 @@
 		position: absolute;
 		left: 50%;
 		top: 26px;
-		width: 45px;
-		height: 45px;
+		width: 52px;
+		height: 52px;
 		transform: translate(-50%);
 		background-image: url("../img/photo-camera-icon.png");
 		background-repeat: no-repeat;
 		background-position: top;
-		background-size: 45px 45px;
+		background-size: 52px 52px;
 	}
 }
 
@@ -49,13 +49,102 @@
 	padding-top: 9px;
 }
 
+.form-submit .form__input-comment {
+	width: 153px;
+	font-size: 11px;
+	line-height: 18px;
+	color: $middle-gray;
+}
+
 .form-submit .form__input-comment p {
-	margin-top: 21px;
 	margin-bottom: 20px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 .form-submit input[type="submit"] {
 	margin-top: 69px;
 	color: #a4aab3;
 	background-color: #eaecef;
+}
+
+@media (min-width: 1366px) {
+	.form-submit {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(5);
+	}
+	.form-submit label[for="file"] {
+		margin-right: 39px;
+		margin-bottom: 0;
+		padding-top: 80px;
+		height: 46px;
+	}
+
+	.form-submit .form__field-wrap {
+	  margin-bottom: 27px;
+  }
+  
+  .form-submit .form__field-wrap--file {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 1;
+  	grid-row-end: 1;
+  	justify-content: flex-start;
+  	margin-bottom: 21px;
+  }
+
+  .form-submit .form__input-comment {
+  	width: 236px;
+  }
+
+  .form-submit .form__input-comment p {
+	  margin-bottom: 25px;
+  }
+
+  .form-submit .form__field-wrap--name {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  }
+
+  .form-submit .form__field-wrap--occupation {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 3;
+  	grid-row-end: 3;
+  }
+
+  .form-submit .form__field-wrap--city {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 4;
+  	grid-row-end: 4;
+  }
+
+  .form-submit .form__field-wrap:last-of-type {
+  	margin-bottom: 40px;
+  }
+
+  .form-submit__btn-wrap {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 5;
+  	grid-row-end: 5;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  }
+
+  .form-submit .btn[type="reset"] {
+  	margin-right: 19px;
+  	margin-left: auto;
+  }
+
+  .form-submit .btn[type="submit"] {
+  	margin: 0;
+  }
 }
