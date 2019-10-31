@@ -32,7 +32,7 @@
 
 .form input:not(.btn) {
 	padding-bottom: 10px;
-	padding-top: 8px;
+	padding-top: 10px;
 	border: none;
 	border-bottom: 1px solid $middle-gray;
 	background-color: #f8fafd;
@@ -58,12 +58,39 @@
 	}
 
 	.form input:not(.btn) {
+		padding-bottom: 9px;
 		padding-top: 6px;
 		width: 655px;
 	}
 
   .form input[type="reset"] {
 	  display: block;
+  }
+}
+
+@media (min-width: 1920px) {
+	::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+
+	::-moz-placeholder {
+	  font-size: 22px;
+	 }/* Firefox 19+ */
+
+	:-moz-placeholder {
+	  font-size: 22px;
+	 }/* Firefox 18- */
+
+	:-ms-input-placeholder {
+	  font-size: 22px;
+	}
+  .form label {
+  	margin-bottom: 27px;
+  	font-size: 14px;
+  }
+
+  .form input:not(.btn) {
+  	width: 780px;
   }
 }
 

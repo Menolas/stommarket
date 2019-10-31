@@ -1,5 +1,5 @@
 .form-submit .form__field-wrap {
-	margin-bottom: 29px;
+	margin-bottom: 26px;
 }
 
 .form-submit .form__field-wrap:last-of-type {
@@ -10,14 +10,15 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 26px;
+	margin-bottom: 32px;
+	padding-right: 5px;
 }
 
 .form-submit label[for="file"] {
 	position: relative;
-	padding-top: 73px;
+	padding-top: 78px;
 	width: 126px;
-	height: 53px;
+	height: 48px;
 	text-align: center;
 	font-size: 9px;
 	line-height: 19px;
@@ -30,14 +31,14 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: 26px;
-		width: 52px;
-		height: 52px;
+		top: 28px;
+		width: 45px;
+		height: 45px;
 		transform: translate(-50%);
 		background-image: url("../img/photo-camera-icon.png");
 		background-repeat: no-repeat;
 		background-position: top;
-		background-size: 52px 52px;
+		background-size: 45px 45px;
 	}
 }
 
@@ -50,6 +51,7 @@
 }
 
 .form-submit .form__input-comment {
+	margin-top: 10px;
 	width: 153px;
 	font-size: 11px;
 	line-height: 18px;
@@ -57,7 +59,7 @@
 }
 
 .form-submit .form__input-comment p {
-	margin-bottom: 20px;
+	margin-bottom: 23px;
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -65,7 +67,7 @@
 }
 
 .form-submit input[type="submit"] {
-	margin-top: 69px;
+	margin-top: 71px;
 	color: #a4aab3;
 	background-color: #eaecef;
 }

@@ -18,9 +18,7 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	padding: 13px;
-	padding-bottom: 11px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
+	padding: 13px 15px;
 
 	&::after {
 		content: "";
@@ -36,12 +34,7 @@
 }
 
 .main-header__logo {
-	padding: 2px;
-	width: 114px;
-	height: 22px;
-}
-
-.main-header__logo img {
+	margin-top: 2px;
 	width: 114px;
 	height: 22px;
 }
@@ -72,7 +65,7 @@
 
 .main-header__user-block {
 	position: relative;
-	margin-left: 27px;
+	margin-left: 25px;
   width: 24px;
   height: 24px;
 
@@ -80,9 +73,9 @@
   	content: "";
 		position: absolute;
 		top: 0;
-		right: 1px;
-		width: 26px;
-		height: 26px;
+		right: 0;
+		width: 24px;
+		height: 24px;
 		background-image: url("../img/user-icon.svg");
 		background-repeat: no-repeat;
 		background-size: 24px 24px;
@@ -102,11 +95,6 @@
 	.main-header__logo {
 		margin-top: 10px;
 		padding: 0;
-		width: 118px;
-		height: 23px;
-	}
-
-	.main-header__logo img {
 		width: 118px;
 		height: 23px;
 	}
@@ -170,13 +158,80 @@
 	.main-header__user-block {
 		margin-top: 2px;
 		margin-left: 402px;
-	  width: 35px;
-	  height: 35px;
+	  width: 33px;
+	  height: 33px;
 
 	  &::before {
-			width: 35px;
-			height: 35px;
+			width: 33px;
+			height: 33px;
 			background-size: 33px 33px;
 	  }
   }
+}
+
+@media (min-width: 1920px) {
+	.main-header {
+		padding: 22px 100px;
+		padding-left: 98px;
+	}
+
+	.main-header__logo {
+		margin-top: 3px;
+		width: 190px;
+		height: 51px;
+	}
+
+	.main-header__search {
+		width: 809px;
+		height: 47px;
+
+		&::before {
+		left: 17px;
+		width: 21px;
+	  height: 21px;
+		background-size: 21px 21px;
+	  }
+	}
+
+	.main-header__search input {
+		padding-left: 51px;
+		width: 809px;
+		height: 47px;
+	}
+
+	.main-header__search input::-webkit-input-placeholder {
+	  font-size: 15px;
+  }
+
+	.main-header__search input::-moz-placeholder {
+	  font-size: 15px;
+	 }/* Firefox 19+ */
+
+	.main-header__search input:-moz-placeholder {
+	  font-size: 15px;
+	 }/* Firefox 18- */
+
+	.main-header__search input:-ms-input-placeholder {
+	  font-size: 15px;
+	}
+
+	.main-header__user-block {
+		margin-top: 8px;
+		margin-left: 477px;
+		padding-left: 44px;
+		width: 73px;
+
+		&::before {
+			right: 84px;
+		}
+	}
+
+	.main-header__user-block span {
+		display: block;
+		margin-top: 5px;
+		font-size: 17px;
+		line-height: 22px;
+		color: $blue;
+		font-weight: 500;
+	}
 }

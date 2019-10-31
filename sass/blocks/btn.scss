@@ -16,7 +16,16 @@
 
 @media (min-width: 1366px) {
 	.btn {
+		height: 45px;
 		color: #a4aab3;
 		background-color: #eaecef;
+	}
+}
+
+@media (min-width: 1920px) {
+	.btn {
+		width: 185px;
+		height: 57px;
+		font-size: 12px;
 	}
 }

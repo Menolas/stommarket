@@ -10,7 +10,11 @@
 	<div class="container">
 		<header class="main-header">
 			<div class="main-header__logo">
-				<img src="img/logo.png" alt="Логотип Стоммаркета">
+				<picture>
+					<source media="(min-width: 1920px)" srcset="img/logo-wide.png">
+	                <source media="(min-width: 1366px)" srcset="img/logo-adaptive.png">
+	                <img src="img/logo.png" alt="Логотип компании">
+				</picture>
 			</div>
 			<div class="main-header__search">
 				<input type="search" name="search" placeholder="Введите фамилию, или направление">

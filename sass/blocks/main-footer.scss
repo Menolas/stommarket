@@ -75,3 +75,15 @@
 		color: $gray;
 	}
 }
+
+@media (min-width: 1920px) {
+	.main-footer__copyright,
+	.main-footer__confidential-link {
+		font-size: 14px;
+	}
+
+	.main-footer__main-link,
+	.main-footer__phone {
+		font-size: 15px;
+	}
+}
