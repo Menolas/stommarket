@@ -105,13 +105,18 @@
   .form-block__step {
   	display: block;
   	position: absolute;
-  	top: -12px;
+  	top: 0;
   	right: 0;
   	font-size: 12px;
   	line-height: 38px;
   	font-weight: 600;
   	color: $blue;
   	text-transform: uppercase;
+  }
+
+  .form-block__step pre {
+  	margin: 0;
+  	font-family: "Montserrat";
   }
 
   .form-block__button-wrap {

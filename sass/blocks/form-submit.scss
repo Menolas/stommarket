@@ -35,10 +35,10 @@
 		width: 45px;
 		height: 45px;
 		transform: translate(-50%);
-		background-image: url("../img/photo-camera-icon.png");
+		background-image: url("../img/photo-camera-icon.svg");
 		background-repeat: no-repeat;
-		background-position: top;
-		background-size: 45px 45px;
+		background-position: center;
+		background-size: 45px 36px;
 	}
 }
 
@@ -76,13 +76,19 @@
 	.form-submit {
 		display: grid;
 		grid-template-columns: auto;
-		grid-template-rows: repeat(5);
+		grid-template-rows: auto auto auto auto auto;
 	}
 	.form-submit label[for="file"] {
 		margin-right: 39px;
 		margin-bottom: 0;
 		padding-top: 80px;
 		height: 46px;
+
+		&::before {
+			width: 52px;
+			height: 52px;
+			background-size: 52px 42px;
+		}
 	}
 
 	.form-submit .form__field-wrap {
@@ -96,14 +102,16 @@
   	grid-row-end: 1;
   	justify-content: flex-start;
   	margin-bottom: 21px;
+  	padding-right: 0;
   }
 
   .form-submit .form__input-comment {
+  	margin: 0;
   	width: 236px;
   }
 
   .form-submit .form__input-comment p {
-	  margin-bottom: 25px;
+	  margin-bottom: 31px;
   }
 
   .form-submit .form__field-wrap--name {
@@ -125,10 +133,7 @@
   	grid-column-end: 1;
   	grid-row-start: 4;
   	grid-row-end: 4;
-  }
-
-  .form-submit .form__field-wrap:last-of-type {
-  	margin-bottom: 40px;
+  	margin-bottom: 42px;
   }
 
   .form-submit__btn-wrap {

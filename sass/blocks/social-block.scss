@@ -1,5 +1,5 @@
 .social-block {
-	grid-column-start: 4;
+	grid-column-start: 3;
 	grid-column-end: -1;
 	grid-row-start: 1;
 	grid-row-end: 1;
@@ -22,6 +22,8 @@
 
 .social-block__link {
 	display: block;
+	width: 30px;
+	height: 30px;
 	font-size: 0;
 	background-color: #f8fafd;
 	border-radius: 3px;
@@ -30,15 +32,11 @@
 }
 
 .social-block__link--insta {
-	width: 35px;
-	height: 35px;
 	border: 1px solid #cf446f;
 	background-image: url("../img/instagram-logo.svg");
 	background-size: 15px 15px;
 }
 .social-block__link--vk {
-	width: 34px;
-	height: 35px;
 	border: 1px solid #5b80b4;
 	background-image: url("../img/vk-social-network-logo.svg");
 	background-size: 17px 10px;

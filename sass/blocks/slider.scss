@@ -41,7 +41,6 @@
 		display: grid;
 		grid-template-columns: 359px auto;
 		grid-template-rows: auto;
-		min-height: 478px;
 	}
 
 	.slider__item {
@@ -49,7 +48,6 @@
 		padding-left: 94px;
 		padding-top: 48px;
 		padding-bottom: 53px;
-		min-height: 478px;
 	}
 
 	.slider__item--greeting {
@@ -67,6 +65,7 @@
   	grid-column-end: -1;
   	grid-row-start: 1;
   	grid-row-end: -1;
+  	display: grid;
   }
 
   .slider__item--closed {
@@ -79,6 +78,7 @@
   	grid-row-start: 1;
   	grid-row-end: -1;
   	padding-bottom: 45px;
+  	padding-top: 50px;
   }
 
   .slider__item--submit .slider__item-title {

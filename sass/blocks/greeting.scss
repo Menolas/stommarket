@@ -36,6 +36,7 @@
 
 @media (min-width: 1366px) {
 	.greeting {
+		display: grid;
 		padding-top: 45px;
 		padding-bottom: 0;
 	}
@@ -45,10 +46,14 @@
 	}
 
 	.greeting__title {
+		justify-self: start;
 		margin-bottom: 18px;
+		margin-left: 58px;
 	}
 
 	.greeting p {
+		justify-self: start;
+		margin-left: 56px;
 		margin-bottom: 28px;
 		font-size: 14px;
 		line-height: 18px;

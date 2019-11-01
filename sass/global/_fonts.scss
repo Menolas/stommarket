@@ -7,6 +7,13 @@
 
 @font-face {
   font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
@@ -16,7 +23,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/Montserrat/Montserrat-Semibold.ttf") format("truetype");
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
