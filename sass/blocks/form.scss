@@ -47,6 +47,34 @@
 	margin-left: auto;
 }
 
+@media (min-width: 1024px) {
+	.form {
+		width: 500px;
+	}
+
+	.form__field-wrap {
+		width: 500px;
+	}
+
+	.form__btn-wrap {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 5;
+  	grid-row-end: 5;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  }
+
+  .form__comment {
+  	display: block;
+  	width: 278px;
+  	font-size: 10px;
+  	line-height: 13px;
+  	color: #c4c4c4;
+  }
+}
+
 @media (min-width: 1366px) {
 	.form {
 		width: 655px;
@@ -107,6 +135,13 @@
   	padding-top: 7px;
   	padding-bottom: 15px;
   	width: 780px;
+  }
+
+  .form__comment {
+  	margin-bottom: 3px;
+  	width: 380px;
+  	font-size: 12px;
+  	line-height: 19px;
   }
 }
 

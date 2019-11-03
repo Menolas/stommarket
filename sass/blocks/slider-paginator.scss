@@ -52,11 +52,7 @@
   border-radius: 30px;
 }
 
-.slider-paginator__btn {
-	margin-top: 5px;
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
 	.slider-paginator {
 		display: none;
 	}

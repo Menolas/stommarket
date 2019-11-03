@@ -74,9 +74,17 @@ input {
   width: 375px;
   background-color: #ffffff; }
 
+@media (min-width: 1024px) {
+  .container {
+    width: 1024px; } }
+
 @media (min-width: 1366px) {
   .container {
     width: 1366px; } }
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px; } }
 
 @media (min-width: 1920px) {
   .container {
@@ -208,14 +216,9 @@ input {
 .main-header__user-block span {
   font-size: 0; }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .main-header {
-    padding: 16px 60px; }
-  .main-header__logo {
-    margin-top: 10px;
-    padding: 0;
-    width: 118px;
-    height: 23px; }
+    padding: 16px 50px; }
   .main-header__search input::-webkit-input-placeholder {
     font-size: 13px;
     line-height: 22px;
@@ -241,7 +244,7 @@ input {
   .main-header__search {
     margin: 0;
     margin-left: auto;
-    width: 513px;
+    width: 480px;
     height: 38px; }
     .main-header__search::before {
       top: 50%;
@@ -256,19 +259,36 @@ input {
   .main-header__search input {
     display: block;
     padding-left: 40px;
-    width: 513px;
+    width: 480px;
     height: 38px;
     border: 1px solid #eaecef;
     border-radius: 5px; }
+  .main-header__logo {
+    margin-top: 10px;
+    padding: 0; }
   .main-header__user-block {
     margin-top: 2px;
-    margin-left: 402px;
+    margin-left: 100px;
     width: 33px;
     height: 33px; }
     .main-header__user-block::before {
       width: 33px;
       height: 33px;
       background-size: 33px 33px; } }
+
+@media (min-width: 1366px) {
+  .main-header {
+    padding: 16px 60px; }
+  .main-header__logo {
+    width: 118px;
+    height: 23px; }
+  .main-header__search {
+    width: 513px; }
+  .main-header__search input {
+    width: 513px;
+    height: 38px; }
+  .main-header__user-block {
+    margin-left: 402px; } }
 
 @media (min-width: 1920px) {
   .main-header {
@@ -328,6 +348,7 @@ input {
 
 .greeting__mobile {
   margin-bottom: 42px;
+  width: 307px;
   text-align: center;
   color: #909AAB;
   font-size: 16px;
@@ -337,20 +358,20 @@ input {
   display: none; }
 
 .greeting__picture {
-  margin-bottom: 25px;
   width: 375px;
   height: 364px; }
 
 .greeting__btn {
+  margin-top: 25px;
   margin-left: auto;
   margin-right: 36px; }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
+  .greeting__btn {
+    display: none; }
   .greeting {
     padding-bottom: 0;
     height: 100%; }
-  .greeting__btn {
-    display: none; }
   .greeting__title {
     margin-bottom: 18px;
     margin-left: 58px;
@@ -360,13 +381,14 @@ input {
     margin-left: 56px;
     margin-bottom: auto;
     width: 255px;
+    text-align: left;
     font-size: 14px;
-    line-height: 18px;
-    text-align: left; }
+    line-height: 18px; }
   .greeting__mobile {
-    display: none; }
+    display: none; } }
+
+@media (min-width: 1366px) {
   .greeting__picture {
-    margin-bottom: 0;
     width: 462px;
     height: 416px; } }
 
@@ -436,10 +458,7 @@ input {
   background-color: #2C78F6;
   border-radius: 30px; }
 
-.slider-paginator__btn {
-  margin-top: 5px; }
-
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .slider-paginator {
     display: none; } }
 
@@ -604,29 +623,41 @@ input {
 .form-block__comment {
   display: none; }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .form-block {
     position: relative; }
   .form-block__title {
-    margin-bottom: 27px;
     text-align: left; }
   .form-block__step {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 12px;
-    line-height: 38px;
+    font-size: 10px;
+    line-height: 22px;
     font-weight: 600;
     color: #2C78F6;
     text-transform: uppercase; }
+  .form-block__button-wrap {
+    justify-content: flex-start;
+    margin-bottom: 34px;
+    width: 100%; }
+  .form-block__button {
+    margin-right: 45px; }
+  .form-block__login {
+    margin-bottom: 100px; } }
+
+@media (min-width: 1366px) {
+  .form-block__title {
+    margin-bottom: 27px; }
+  .form-block__step {
+    font-size: 12px;
+    line-height: 38px; }
   .form-block__step pre {
     margin: 0;
     font-family: "Montserrat"; }
   .form-block__button-wrap {
-    justify-content: flex-start;
-    margin-bottom: 44px;
-    width: 100%; }
+    margin-bottom: 44px; }
   .form-block__button {
     margin-right: 59px;
     padding-top: 78px;
@@ -650,13 +681,7 @@ input {
     margin-top: 41px;
     margin-bottom: 36px; }
   .form-block__login p {
-    margin-right: 20px; }
-  .form-block__comment {
-    display: block;
-    width: 278px;
-    font-size: 10px;
-    line-height: 13px;
-    color: #c4c4c4; } }
+    margin-right: 20px; } }
 
 @media (min-width: 1920px) {
   .form-block__title {
@@ -689,12 +714,7 @@ input {
     .form-block__login button::before {
       width: 45px;
       height: 45px;
-      background-size: 28px 20px; }
-  .form-block__comment {
-    margin-bottom: 3px;
-    width: 380px;
-    font-size: 12px;
-    line-height: 19px; } }
+      background-size: 28px 20px; } }
 
 ::-webkit-input-placeholder {
   font-size: 16px;
@@ -754,6 +774,26 @@ input {
 .form input[type="submit"] {
   margin-left: auto; }
 
+@media (min-width: 1024px) {
+  .form {
+    width: 500px; }
+  .form__field-wrap {
+    width: 500px; }
+  .form__btn-wrap {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .form__comment {
+    display: block;
+    width: 278px;
+    font-size: 10px;
+    line-height: 13px;
+    color: #c4c4c4; } }
+
 @media (min-width: 1366px) {
   .form {
     width: 655px; }
@@ -791,7 +831,12 @@ input {
   .form input:not(.btn) {
     padding-top: 7px;
     padding-bottom: 15px;
-    width: 780px; } }
+    width: 780px; }
+  .form__comment {
+    margin-bottom: 3px;
+    width: 380px;
+    font-size: 12px;
+    line-height: 19px; } }
 
 .form-login input[name="phone-number"] {
   /* Firefox 19+ */
@@ -918,22 +963,14 @@ input {
   color: #a4aab3;
   background-color: #eaecef; }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .form-submit {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto; }
   .form-submit label[for="file"] {
     margin-right: 39px;
-    margin-bottom: 0;
-    padding-top: 80px;
-    height: 46px; }
-    .form-submit label[for="file"]::before {
-      width: 52px;
-      height: 52px;
-      background-size: 52px 42px; }
-  .form-submit .form__field-wrap {
-    margin-bottom: 27px; }
+    margin-bottom: 0; }
   .form-submit .form__field-wrap--file {
     grid-column-start: 1;
     grid-column-end: 1;
@@ -942,11 +979,6 @@ input {
     justify-content: flex-start;
     margin-bottom: 21px;
     padding-right: 0; }
-  .form-submit .form__input-comment {
-    margin: 0;
-    width: 236px; }
-  .form-submit .form__input-comment p {
-    margin-bottom: 31px; }
   .form-submit .form__field-wrap--name {
     grid-column-start: 1;
     grid-column-end: 1;
@@ -957,6 +989,33 @@ input {
     grid-column-end: 1;
     grid-row-start: 3;
     grid-row-end: 3; }
+  .form-submit .form__field-wrap--city {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    margin-bottom: 42px; }
+  .form-submit .btn[type="reset"] {
+    margin-right: 19px;
+    margin-left: auto; }
+  .form-submit .btn[type="submit"] {
+    margin: 0; } }
+
+@media (min-width: 1366px) {
+  .form-submit label[for="file"] {
+    padding-top: 80px;
+    height: 46px; }
+    .form-submit label[for="file"]::before {
+      width: 52px;
+      height: 52px;
+      background-size: 52px 42px; }
+  .form-submit .form__field-wrap {
+    margin-bottom: 27px; }
+  .form-submit .form__input-comment {
+    margin: 0;
+    width: 236px; }
+  .form-submit .form__input-comment p {
+    margin-bottom: 31px; }
   .form-submit input[name="occupation"] {
     /* Firefox 19+ */
     /* Firefox 18- */ }
@@ -967,26 +1026,7 @@ input {
     .form-submit input[name="occupation"] :-moz-placeholder {
       content: "Стоматолог"; }
     .form-submit input[name="occupation"] :-ms-input-placeholder {
-      content: "Стоматолог"; }
-  .form-submit .form__field-wrap--city {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    margin-bottom: 42px; }
-  .form-submit__btn-wrap {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .form-submit .btn[type="reset"] {
-    margin-right: 19px;
-    margin-left: auto; }
-  .form-submit .btn[type="submit"] {
-    margin: 0; } }
+      content: "Стоматолог"; } }
 
 @media (min-width: 1920px) {
   .form-submit .form__field-wrap {
@@ -1026,6 +1066,7 @@ input {
 .slider__item--greeting {
   padding: 0;
   padding-top: 38px;
+  padding-bottom: 26px;
   background-color: #ffffff; }
 
 .slider__item--submit {
@@ -1040,15 +1081,15 @@ input {
 .slider__item--closed {
   display: none; }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .slider__list {
     display: grid;
     grid-template-columns: 359px auto;
     grid-template-rows: auto; }
   .slider__item {
-    padding-right: 258px;
-    padding-left: 94px;
-    padding-top: 48px;
+    padding-right: 105px;
+    padding-left: 60px;
+    padding-top: 30px;
     padding-bottom: 53px; }
   .slider__item--greeting {
     position: static;
@@ -1056,8 +1097,8 @@ input {
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
-    padding: 0;
-    padding-top: 45px; }
+    padding-left: 0;
+    padding-right: 0; }
   .slider__item--login {
     display: block;
     grid-column-start: 2;
@@ -1065,13 +1106,23 @@ input {
     grid-row-start: 1;
     grid-row-end: -1;
     display: grid; }
-  .slider__item--closed {
-    display: none; }
   .slider__item--submit {
     grid-column-start: 2;
     grid-column-end: -1;
     grid-row-start: 1;
-    grid-row-end: -1;
+    grid-row-end: -1; }
+  .slider__item--closed {
+    display: none; } }
+
+@media (min-width: 1366px) {
+  .slider__item:not(.slider__item--greeting) {
+    padding-right: 258px;
+    padding-left: 94px;
+    padding-top: 48px;
+    padding-bottom: 53px; }
+  .slider__item--greeting {
+    padding-top: 45px; }
+  .slider__item--submit {
     padding-bottom: 45px;
     padding-top: 50px; }
   .slider__item--submit .slider__item-title {

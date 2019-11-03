@@ -72,30 +72,19 @@
 	background-color: #eaecef;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
 	.form-submit {
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-rows: auto auto auto auto auto;
 	}
+
 	.form-submit label[for="file"] {
 		margin-right: 39px;
 		margin-bottom: 0;
-		padding-top: 80px;
-		height: 46px;
-
-		&::before {
-			width: 52px;
-			height: 52px;
-			background-size: 52px 42px;
-		}
 	}
 
-	.form-submit .form__field-wrap {
-	  margin-bottom: 27px;
-  }
-  
-  .form-submit .form__field-wrap--file {
+	.form-submit .form__field-wrap--file {
   	grid-column-start: 1;
   	grid-column-end: 1;
   	grid-row-start: 1;
@@ -103,15 +92,6 @@
   	justify-content: flex-start;
   	margin-bottom: 21px;
   	padding-right: 0;
-  }
-
-  .form-submit .form__input-comment {
-  	margin: 0;
-  	width: 236px;
-  }
-
-  .form-submit .form__input-comment p {
-	  margin-bottom: 31px;
   }
 
   .form-submit .form__field-wrap--name {
@@ -126,6 +106,49 @@
   	grid-column-end: 1;
   	grid-row-start: 3;
   	grid-row-end: 3;
+  }
+
+  .form-submit .form__field-wrap--city {
+  	grid-column-start: 1;
+  	grid-column-end: 1;
+  	grid-row-start: 4;
+  	grid-row-end: 4;
+  	margin-bottom: 42px;
+  }
+
+  .form-submit .btn[type="reset"] {
+  	margin-right: 19px;
+  	margin-left: auto;
+  }
+
+  .form-submit .btn[type="submit"] {
+  	margin: 0;
+  }
+}
+
+@media (min-width: 1366px) {
+	.form-submit label[for="file"] {
+		padding-top: 80px;
+		height: 46px;
+
+		&::before {
+			width: 52px;
+			height: 52px;
+			background-size: 52px 42px;
+		}
+	}
+
+	.form-submit .form__field-wrap {
+	  margin-bottom: 27px;
+  }
+
+  .form-submit .form__input-comment {
+  	margin: 0;
+  	width: 236px;
+  }
+
+  .form-submit .form__input-comment p {
+	  margin-bottom: 31px;
   }
 
   .form-submit input[name="occupation"] {
@@ -144,33 +167,6 @@
 		:-ms-input-placeholder {
 		  content: "Стоматолог";
 		}
-  }
-
-  .form-submit .form__field-wrap--city {
-  	grid-column-start: 1;
-  	grid-column-end: 1;
-  	grid-row-start: 4;
-  	grid-row-end: 4;
-  	margin-bottom: 42px;
-  }
-
-  .form-submit__btn-wrap {
-  	grid-column-start: 1;
-  	grid-column-end: 1;
-  	grid-row-start: 5;
-  	grid-row-end: 5;
-  	display: flex;
-  	justify-content: space-between;
-  	align-items: center;
-  }
-
-  .form-submit .btn[type="reset"] {
-  	margin-right: 19px;
-  	margin-left: auto;
-  }
-
-  .form-submit .btn[type="submit"] {
-  	margin: 0;
   }
 }
 
