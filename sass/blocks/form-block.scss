@@ -163,10 +163,6 @@
 
   .form-block__comment {
   	display: block;
-  	grid-row-start: 3;
-  	grid-row-end: -1;
-  	grid-column-start: 1;
-  	grid-column-end: 1;
   	width: 278px;
   	font-size: 10px;
   	line-height: 13px;
@@ -210,11 +206,12 @@
   }
 
   .form-block__login {
-  	margin-top: 40px;
-  	margin-bottom: 60px;
+  	margin-top: 25px;
+  	margin-bottom: 40px;
   }
 
   .form-block__login button {
+  	margin-top: 3px;
   	padding-left: 57px;
   	font-size: 16px;
 
@@ -226,6 +223,8 @@
   }
 
   .form-block__comment {
+  	margin-bottom: 3px;
+  	width: 380px;
   	font-size: 12px;
   	line-height: 19px;
   }

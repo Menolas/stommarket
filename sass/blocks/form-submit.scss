@@ -128,6 +128,24 @@
   	grid-row-end: 3;
   }
 
+  .form-submit input[name="occupation"] {
+  	::-webkit-input-placeholder {
+    content: "Стоматолог";
+    }
+
+		::-moz-placeholder {
+		  content: "Стоматолог";
+		 }/* Firefox 19+ */
+
+		:-moz-placeholder {
+		  content: "Стоматолог";
+		 }/* Firefox 18- */
+
+		:-ms-input-placeholder {
+		  content: "Стоматолог";
+		}
+  }
+
   .form-submit .form__field-wrap--city {
   	grid-column-start: 1;
   	grid-column-end: 1;
@@ -153,5 +171,40 @@
 
   .form-submit .btn[type="submit"] {
   	margin: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+	.form-submit .form__field-wrap {
+	  margin-bottom: 46px;
+  }
+
+  .form-submit label[for="file"] {
+  	margin-right: 47px;
+  	padding-top: 96px;
+  	width: 156px;
+  	height: 60px;
+
+  	&::before {
+  		top: 41px;
+  	}
+  }
+
+  .form-submit .form__input-comment {
+  	margin-bottom: 15px;
+  	font-size: 14px;
+  	line-height: 22px;
+  }
+
+  .form-submit .form__input-comment p {
+  	margin-bottom: 26px;
+  }
+
+  .form-submit .form__field-wrap--file {
+  	margin-bottom: 36px;
+  }
+
+  .form-submit .form__field-wrap--city { 
+  	margin-bottom: 67px;
   }
 }

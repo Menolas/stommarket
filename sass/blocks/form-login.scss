@@ -1,5 +1,4 @@
 .form-login input[name="phone-number"] {
-	
 
   &::-webkit-input-placeholder {
     color: $gray;
@@ -47,7 +46,7 @@
 @media (min-width: 1366px)  {
 	.form-login {
 		display: grid;
-		grid-template-columns: auto auto;
+		grid-template-columns: auto;
 		grid-template-rows: auto auto auto;
 		align-items: center;
 	}
@@ -86,10 +85,9 @@
 		}
   }
 
-  .form-login__btn {
-  	grid-row-start: 3;
-		grid-row-end: -1;
-		grid-column-start: 2;
-		grid-column-end: -1;
+  .form-login__btn-wrap {
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
   }
 }

@@ -35,8 +35,8 @@
 			    	<li class="slider__item  slider__item--greeting  slider__item--shown">
 			    		<div class="greeting">
 							<h1 class="greeting__title  title">Добро пожаловать</h1>
-							<p>Заполните пару простых шагов,<br>
-								<span class="greeting__mobile">для комфортной работы</span><span class="greeting__adaptive">чтобы начать работу</span>с сервисом</p>
+							<p class="greeting__mobile">Заполните пару простых шагов,<br>для комфортной работы с сервисом</p>
+							<p class="greeting__adaptive">Заполните пару простых шагов, чтобы начать работу с сервисом</p>
 							<div class="greeting__picture">
 								<picture>
 				                  <source media="(min-width: 1920px)" srcset="img/illustration-wide.jpg">
@@ -60,9 +60,14 @@
 									<label for="phone-number">Телефон<sup>*</sup></label>
 									<input type="" name="phone-number" id="phone-number" placeholder="+7 (911) 725-36-11">
 								</div>
-								<div class="form-block__login"><p>войти с помощью:</p><button>Стоммаркет</button></div>
-								<p class="form-block__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
-								<input class="switch__btn  form-login__btn  btn" type="submit" name="next" value="Далее">
+								<div class="form-block__login">
+									<p>войти с помощью:</p>
+									<button>Стоммаркет</button>
+								</div>
+								<div class="form-login__btn-wrap">
+									<p class="form-block__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
+									<input class="switch__btn  form-login__btn  btn" type="submit" name="next" value="Далее">
+								</div>
 							</form>
 						</div>
 					</li>

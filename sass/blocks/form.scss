@@ -31,6 +31,7 @@
 }
 
 .form input:not(.btn) {
+	padding: 0;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	border: none;
@@ -50,7 +51,7 @@
 	.form {
 		width: 655px;
 	}
-	
+
 	.form__field-wrap {
 		width: 655px;
 	}
@@ -88,12 +89,23 @@
 	:-ms-input-placeholder {
 	  font-size: 22px;
 	}
+
+	.form {
+		width: 780px;
+	}
+
+	.form__field-wrap {
+		width: 780px;
+	}
+
   .form label {
   	margin-bottom: 27px;
   	font-size: 14px;
   }
 
   .form input:not(.btn) {
+  	padding-top: 7px;
+  	padding-bottom: 15px;
   	width: 780px;
   }
 }
