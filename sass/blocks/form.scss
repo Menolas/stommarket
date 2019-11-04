@@ -47,6 +47,10 @@
 	margin-left: auto;
 }
 
+.form__comment {
+	display: none;
+}
+
 @media (min-width: 1024px) {
 	.form {
 		width: 500px;
@@ -119,11 +123,11 @@
 	}
 
 	.form {
-		width: 780px;
+		width: 784px;
 	}
 
 	.form__field-wrap {
-		width: 780px;
+		width: 784px;
 	}
 
   .form label {
@@ -134,12 +138,12 @@
   .form input:not(.btn) {
   	padding-top: 7px;
   	padding-bottom: 15px;
-  	width: 780px;
+  	width: 784px;
   }
 
   .form__comment {
   	margin-bottom: 3px;
-  	width: 380px;
+  	width: 350px;
   	font-size: 12px;
   	line-height: 19px;
   }

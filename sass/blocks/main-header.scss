@@ -191,6 +191,12 @@
 	}
 }
 
+@media (min-width: 1440px) {
+	.main-header {
+	  padding: 18px 80px;
+	}
+}
+
 @media (min-width: 1920px) {
 	.main-header {
 		padding: 22px 100px;
@@ -247,14 +253,5 @@
 		&::before {
 			right: 84px;
 		}
-	}
-
-	.main-header__user-block span {
-		display: block;
-		margin-top: 5px;
-		font-size: 17px;
-		line-height: 22px;
-		color: $blue;
-		font-weight: 500;
 	}
 }

@@ -2,7 +2,7 @@
 
 var sliderPaginator = document.querySelector(".slider-paginator");
 var paginatorMarkers = sliderPaginator.querySelectorAll(".slider-paginator__item");
-var formSwitchButton = document.querySelector(".greeting .switch__btn");
+var formSwitchButton = document.querySelector(".greeting .greeting__btn");
 var sliderElements = document.querySelectorAll(".slider__item");
 var formLoginButton = document.querySelector(".form-login__btn");
 

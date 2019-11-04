@@ -48,50 +48,6 @@
 	box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4);
 }
 
-.form-block__login {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 27px;
-	margin-bottom: 164px;
-	padding-left: 5px;
-	color: $middle-gray;
-}
-
-.form-block__login button {
-	position: relative;
-	margin: 0;
-	padding-top: 9px;
-	padding-bottom: 9px;
-	padding-left: 52px;
-	padding-right: 0;
-	font-size: 14px;
-	line-height: 22px;
-	color: #424242;
-	text-decoration: underline;
-	border: none;
-	background-color: transparent;
-
-	&::before {
-		content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 39px;
-    height: 39px;
-    border-radius: 50%;
-    background-image: url("../img/tooth-icon.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 24px 17px;
-		box-shadow: 0 0 17px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.form-block__comment {
-	display: none;
-}
-
 @media (min-width: 1024px) {
 	.form-block {
 		position: relative;
@@ -121,10 +77,6 @@
 
   .form-block__button {
   	margin-right: 45px;
-  }
-
-  .form-block__login {
-  	margin-bottom: 100px;
   }
 }
 
@@ -168,20 +120,6 @@
   .form-block__button--student {
   	background-size: 44px 40px;
   }
-
-  .form-block__login {
-  	grid-row-start: 2;
-  	grid-row-end: 2;
-  	grid-column-start: 1;
-  	grid-column-end: -1;
-  	justify-content: flex-start;
-  	margin-top: 41px;
-  	margin-bottom: 36px;
-  }
-
-  .form-block__login p {
-  	margin-right: 20px;
-  }
 }
 
 @media (min-width: 1920px) {
@@ -213,30 +151,4 @@
   .form-block__button--student {
   	background-size: 66px 60px;
   }
-
-  .form-block__login p {
-  	margin-right: 30px;
-  	font-size: 14px;
-  }
-
-  .form-block__login {
-  	margin-top: 25px;
-  	margin-bottom: 40px;
-  }
-
-  .form-block__login button {
-  	margin-top: 3px;
-  	padding-left: 57px;
-  	font-size: 16px;
-
-  	&::before {
-  		width: 45px;
-  		height: 45px;
-  		background-size: 28px 20px;
-  	}
-  }
 }
-
-
-
-

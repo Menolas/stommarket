@@ -43,7 +43,58 @@
   }
 }
 
-@media (min-width: 1366px)  {
+.form-login .form__login-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 27px;
+	margin-bottom: 164px;
+	padding-left: 5px;
+	color: $middle-gray;
+}
+
+.form-login .form__login-block button {
+	position: relative;
+	margin: 0;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 52px;
+	padding-right: 0;
+	font-size: 14px;
+	line-height: 22px;
+	color: #424242;
+	text-decoration: underline;
+	border: none;
+	background-color: transparent;
+
+	&::before {
+		content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-image: url("../img/tooth-icon.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 24px 17px;
+		box-shadow: 0 0 17px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-login .form__login-block {
+  	justify-content: flex-start;
+  	margin-bottom: 100px;
+  }
+
+  .form-login .form__login-block p {
+  	margin-right: 20px;
+  }
+}
+
+@media (min-width: 1366px) {
 	.form-login {
 		display: grid;
 		grid-template-columns: auto;
@@ -76,18 +127,51 @@
 	    color: #c4c4c4;
 	  }/* Firefox 19+ */
 
-		&:-moz-placeholder {
-		  color: #c4c4c4;
-		 }/* Firefox 18- */
+	  &:-moz-placeholder {
+		color: #c4c4c4;
+	  }/* Firefox 18- */
 
-		&:-ms-input-placeholder {
-		  color: #c4c4c4;
-		}
+	  &:-ms-input-placeholder {
+		color: #c4c4c4;
+	  }
+  }
+
+  .form-login .form__login-block {
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	grid-column-start: 1;
+  	grid-column-end: -1;
+  	margin-top: 41px;
+  	margin-bottom: 36px;
   }
 
   .form-login__btn-wrap {
   	display: flex;
   	justify-content: space-between;
   	align-items: center;
+  }
+}
+
+@media (min-width: 1920px) {
+	.form-login .form__login-block {
+  	margin-top: 25px;
+  	margin-bottom: 40px;
+  }
+
+  .form-login .form__login-block p {
+  	margin-right: 30px;
+  	font-size: 14px;
+  }
+
+  .form-login .form__login-block button {
+  	margin-top: 3px;
+  	padding-left: 57px;
+  	font-size: 16px;
+
+  	&::before {
+  		width: 45px;
+  		height: 45px;
+  		background-size: 28px 20px;
+  	}
   }
 }

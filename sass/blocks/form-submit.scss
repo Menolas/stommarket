@@ -50,7 +50,7 @@
 	padding-top: 9px;
 }
 
-.form-submit .form__input-comment {
+.form-submit .form__input-file-comment {
 	margin-top: 10px;
 	width: 153px;
 	font-size: 11px;
@@ -58,7 +58,7 @@
 	color: $middle-gray;
 }
 
-.form-submit .form__input-comment p {
+.form-submit .form__input-file-comment p {
 	margin-bottom: 23px;
 
 	&:last-of-type {
@@ -142,31 +142,17 @@
 	  margin-bottom: 27px;
   }
 
-  .form-submit .form__input-comment {
+  .form-submit .form__field-wrap--city {
+  	margin-bottom: 42px;
+  }
+
+  .form-submit .form__input-file-comment {
   	margin: 0;
   	width: 236px;
   }
 
-  .form-submit .form__input-comment p {
+  .form-submit .form__input-file-comment p {
 	  margin-bottom: 31px;
-  }
-
-  .form-submit input[name="occupation"] {
-  	::-webkit-input-placeholder {
-    content: "Стоматолог";
-    }
-
-		::-moz-placeholder {
-		  content: "Стоматолог";
-		 }/* Firefox 19+ */
-
-		:-moz-placeholder {
-		  content: "Стоматолог";
-		 }/* Firefox 18- */
-
-		:-ms-input-placeholder {
-		  content: "Стоматолог";
-		}
   }
 }
 
@@ -186,13 +172,13 @@
   	}
   }
 
-  .form-submit .form__input-comment {
+  .form-submit .form__input-file-comment {
   	margin-bottom: 15px;
   	font-size: 14px;
   	line-height: 22px;
   }
 
-  .form-submit .form__input-comment p {
+  .form-submit .form__input-file-comment p {
   	margin-bottom: 26px;
   }
 

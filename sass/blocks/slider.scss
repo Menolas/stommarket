@@ -108,10 +108,10 @@
 		grid-template-columns: 651px auto;
 	}
 
-	.slider__item {
+	.slider__item:not(.slider__item--greeting) {
 		padding-top: 102px;
 		padding-left: 125px;
-		padding-right: 364px;
+		padding-right: 360px;
 		padding-bottom: 210px;
 	}
   
