@@ -24,7 +24,7 @@
 }
 
 .form label {
-	display: inline-block;
+  display: inline-block;
   font-size: 10px;
   line-height: 22px;
   color: $middle-gray;
@@ -52,14 +52,6 @@
 }
 
 @media (min-width: 1024px) {
-	.form {
-		width: 500px;
-	}
-
-	.form__field-wrap {
-		width: 500px;
-	}
-
 	.form__btn-wrap {
   	grid-column-start: 1;
   	grid-column-end: 1;
@@ -80,14 +72,6 @@
 }
 
 @media (min-width: 1366px) {
-	.form {
-		width: 655px;
-	}
-
-	.form__field-wrap {
-		width: 655px;
-	}
-
 	.form label {
 		margin-bottom: 8px;
 		font-size: 12px;
@@ -97,7 +81,6 @@
 	.form input:not(.btn) {
 		padding-bottom: 9px;
 		padding-top: 6px;
-		width: 655px;
 	}
 
   .form input[type="reset"] {
@@ -122,14 +105,6 @@
 	  font-size: 22px;
 	}
 
-	.form {
-		width: 784px;
-	}
-
-	.form__field-wrap {
-		width: 784px;
-	}
-
   .form label {
   	margin-bottom: 27px;
   	font-size: 14px;
@@ -138,7 +113,6 @@
   .form input:not(.btn) {
   	padding-top: 7px;
   	padding-bottom: 15px;
-  	width: 784px;
   }
 
   .form__comment {

@@ -10,7 +10,7 @@
     grid-template-rows: auto auto;
     grid-row-gap: 21px;
     padding: 15px 58px;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 
     &::before {
     	content: "";
@@ -79,9 +79,17 @@
 	}
 }
 
+@media (min-width: 1440px) {
+	.main-footer {
+		padding: 16px 80px;
+		padding-bottom: 25px;
+	}
+}
+
 @media (min-width: 1920px) {
 	.main-footer {
 		grid-template-columns: 336px auto auto;
+		grid-row-gap: 18px;
 		padding: 16px 101px;
 		padding-bottom: 30px;
 	}

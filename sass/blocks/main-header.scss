@@ -195,6 +195,26 @@
 	.main-header {
 	  padding: 18px 80px;
 	}
+
+	.main-header__user-block {
+		margin-top: 8px;
+		margin-left: 477px;
+		padding-left: 44px;
+		width: 73px;
+
+		&::before {
+			right: 84px;
+		}
+	}
+
+	.main-header__user-block span {
+		display: block;
+		margin-top: 5px;
+		font-size: 17px;
+		line-height: 22px;
+		color: $blue;
+		font-weight: 500;
+	}
 }
 
 @media (min-width: 1920px) {
@@ -242,16 +262,5 @@
 
 	.main-header__search input:-ms-input-placeholder {
 	  font-size: 15px;
-	}
-
-	.main-header__user-block {
-		margin-top: 8px;
-		margin-left: 477px;
-		padding-left: 44px;
-		width: 73px;
-
-		&::before {
-			right: 84px;
-		}
 	}
 }

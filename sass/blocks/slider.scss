@@ -56,8 +56,9 @@
 		grid-column-end: 1;
 		grid-row-start: 1;
 		grid-row-end: 1;
-		padding-left: 0;
-		padding-right: 0;
+		padding: 0;
+		padding-top: 30px;
+		padding-bottom: 53px;
 	}
 
 	.slider__item--login {
@@ -82,7 +83,7 @@
 }
 
 @media (min-width: 1366px) {
-	.slider__item:not(.slider__item--greeting) {
+	.slider__item {
 		padding-right: 258px;
 		padding-left: 94px;
 		padding-top: 48px;
@@ -90,12 +91,12 @@
 	}
 
 	.slider__item--greeting {
+		padding: 0;
 		padding-top: 45px;
 	}
 
   .slider__item--submit {
-  	padding-bottom: 45px;
-  	padding-top: 50px;
+  	padding-bottom: 43px;
   }
 
   .slider__item--submit .slider__item-title {
@@ -108,11 +109,11 @@
 		grid-template-columns: 651px auto;
 	}
 
-	.slider__item:not(.slider__item--greeting) {
+	.slider__item {
 		padding-top: 102px;
 		padding-left: 125px;
 		padding-right: 360px;
-		padding-bottom: 210px;
+		padding-bottom: 207px;
 	}
   
   .slider__item--greeting {
