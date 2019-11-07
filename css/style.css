@@ -712,7 +712,8 @@ input {
   padding-top: 10px;
   border: none;
   border-bottom: 1px solid #61656B;
-  background-color: #f8fafd; }
+  background-color: #f8fafd;
+  outline: none; }
 
 .form input[type="reset"] {
   display: none; }
@@ -1098,8 +1099,7 @@ input {
     grid-column-start: 2;
     grid-column-end: -1;
     grid-row-start: 1;
-    grid-row-end: -1;
-    display: grid; }
+    grid-row-end: -1; }
   .slider__item--submit {
     grid-column-start: 2;
     grid-column-end: -1;

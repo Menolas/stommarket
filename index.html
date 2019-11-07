@@ -58,7 +58,7 @@
 							<form class="form  form-login" method="#" action="#">
 								<div class="form__field-wrap">
 									<label for="phone-number">Телефон<sup>*</sup></label>
-									<input type="" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__">
+									<input type="text" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" min="11" max="11">
 								</div>
 								<div class="form__login-block">
 									<p>войти с помощью:</p>
@@ -66,7 +66,7 @@
 								</div>
 								<div class="form__btn-wrap">
 									<p class="form__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
-									<input class="form-login__btn  btn" type="submit" name="next" value="Далее">
+									<input class="form-login__btn  btn" type="submit" value="Далее">
 								</div>
 							</form>
 						</div>
@@ -87,15 +87,15 @@
 								</div>
 								<div class="form__field-wrap  form__field-wrap--name">
 									<label for="name">ФИО<sup>*</sup></label>
-									<input type="text" name="name" id="name" placeholder="Пупкин Владимир Владимирович">
+									<input type="text" name="name" id="name" placeholder="Пупкин Владимир Владимирович" required pattern="[A-Za-z]" min="2">
 								</div>
 								<div class="form__field-wrap  form__field-wrap--occupation">
 									<label for="occupation">Должность<sup>*</sup></label>
-									<input type="text" name="occupation" id="occupation" placeholder="Стоматолог">
+									<input type="text" name="occupation" id="occupation" placeholder="Стоматолог" required pattern="[A-Za-z]" min="2">
 								</div>
 								<div class="form__field-wrap  form__field-wrap--city">
 									<label for="city">Город<sup>*</sup></label>
-									<input type="text" name="city" id="city" placeholder="Санкт-Петербург">
+									<input type="text" name="city" id="city" placeholder="Санкт-Петербург" required pattern="[A-Za-z]" min="2">
 								</div>
 								<div class="form__btn-wrap">
 									<p class="form__comment">Вы cможете отредактировать данную информацию позднее в своем личном кабинете</p>
