@@ -1,10 +1,32 @@
 'use strict';
-// слайдер
+
 var sliderPaginator = document.querySelector('.slider-paginator');
 var paginatorMarkers = sliderPaginator.querySelectorAll('.slider-paginator__item');
+var formLogin = document.querySelector('.form-login');
+var formSubmit = document.querySelector('.form-submit');
 var formSwitchButton = document.querySelector('.greeting .greeting__btn');
 var sliderElements = document.querySelectorAll('.slider__item');
-var formLoginButton = document.querySelector('.form-login__btn');
+var formLoginButton = formLogin.querySelector('.form-login__btn');
+var phoneInput = formLogin.querySelector('input[name="phone-number"]');
+var nameInput = formSubmit.querySelector('input[name="name"]');
+var occupationInput = formSubmit.querySelector('input[name="occupation"]');
+var cityInput = formSubmit.querySelector('input[name="city"]');
+var addInputButton = formLogin.querySelector('.form-login__add-phone-button');
+var formLoginBlock = formLogin.querySelector('.form__login-block');
+var RED_BORDER = '1px solid red';
+
+var getBorder = function (input, borderStyle) {
+  input.style.border = borderStyle;
+};
+
+var inputTemplate = document.querySelector('template').content;
+
+var renderInput = function () {
+  var inputElement = inputTemplate.cloneNode(true);
+  return inputElement;
+};
+
+// слайдер
 
 formSwitchButton.addEventListener('click', function () {
   sliderElements[0].classList.remove('slider__item--shown');
@@ -15,20 +37,13 @@ formSwitchButton.addEventListener('click', function () {
   paginatorMarkers[1].classList.remove('slider-paginator__item--strange-unknowing-blue-point');
 });
 
+addInputButton.addEventListener('click', function () {
+  var inputElement = renderInput();
+  formLogin.insertBefore(inputElement, formLoginBlock);
+  formLogin.removeChild(addInputButton);
+});
+
 // валидация
-
-var RED_BORDER = '1px solid red';
-var NO_BORDER = '';
-var formLogin = document.querySelector('.form-login');
-var formSubmit = document.querySelector('.form-submit');
-var phoneInput = formLogin.querySelector('input[name="phone-number"]');
-var nameInput = formSubmit.querySelector('input[name="name"]');
-var occupationInput = formSubmit.querySelector('input[name="occupation"]');
-var cityInput = formSubmit.querySelector('input[name="city"]');
-
-var getBorder = function (input, borderStyle) {
-  input.style.border = borderStyle;
-};
 
 phoneInput.addEventListener('invalid', function () {
   getBorder(phoneInput, RED_BORDER);
@@ -84,6 +99,8 @@ cityInput.addEventListener('invalid', function () {
   }
 });
 
+/*
+
 formLogin.addEventListener('submit', function (evt) {
   if (!formLogin.checkValidity()) {
     return;
@@ -101,4 +118,4 @@ formSubmit.addEventListener('submit', function (evt) {
   if (!formSubmit.checkValidity()) {
     return;
   }
-});
+});*/

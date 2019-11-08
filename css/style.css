@@ -698,7 +698,8 @@ input {
 
 .form__field-wrap {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 26px; }
 
 .form label {
   display: inline-block;
@@ -807,12 +808,22 @@ input {
     background-color: #45C781;
     transform: rotate(-45deg); }
 
+.form-login__add-phone-button {
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  color: #2C78F6;
+  font-size: 12px;
+  line-height: 22px;
+  border: none;
+  background-color: transparent; }
+
 .form-login .form__login-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 27px;
-  margin-bottom: 164px;
+  margin-bottom: 122px;
   padding-left: 5px;
   color: #61656B; }
 
@@ -902,12 +913,6 @@ input {
       width: 45px;
       height: 45px;
       background-size: 28px 20px; } }
-
-.form-submit .form__field-wrap {
-  margin-bottom: 26px; }
-
-.form-submit .form__field-wrap:last-of-type {
-  margin-bottom: 0; }
 
 .form-submit .form__field-wrap--file {
   flex-direction: row;

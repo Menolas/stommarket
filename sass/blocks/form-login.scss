@@ -43,12 +43,23 @@
   }
 }
 
+.form-login__add-phone-button {
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+	color: $blue;
+	font-size: 12px;
+	line-height: 22px;
+	border: none;
+	background-color: transparent;
+}
+
 .form-login .form__login-block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 27px;
-	margin-bottom: 164px;
+	margin-bottom: 122px;
 	padding-left: 5px;
 	color: $middle-gray;
 }
