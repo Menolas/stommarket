@@ -17,6 +17,13 @@
 	}
 }
 
+.form-login {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	align-items: center;
+}
+
 .form-login .form__field-wrap {
 	position: relative;
 
@@ -44,6 +51,7 @@
 }
 
 .form-login__add-phone-button {
+	justify-self: start;
 	margin: 0;
 	padding: 0;
 	text-decoration: underline;
@@ -55,6 +63,10 @@
 }
 
 .form-login .form__login-block {
+	grid-row-start: 3;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: -1;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -106,18 +118,7 @@
 }
 
 @media (min-width: 1366px) {
-	.form-login {
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-rows: auto auto auto;
-		align-items: center;
-	}
-
 	.form-login .form__field-wrap {
-		grid-row-start: 1;
-		grid-row-end: 1;
-		grid-column-start: 1;
-		grid-column-end: -1;
 
 		&::before {
 			display: none;
@@ -148,10 +149,6 @@
   }
 
   .form-login .form__login-block {
-  	grid-row-start: 2;
-  	grid-row-end: 2;
-  	grid-column-start: 1;
-  	grid-column-end: -1;
   	margin-top: 41px;
   	margin-bottom: 36px;
   }

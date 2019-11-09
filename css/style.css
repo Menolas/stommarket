@@ -713,7 +713,7 @@ input {
   padding-top: 10px;
   border: none;
   border-bottom: 1px solid #61656B;
-  background-color: #f8fafd;
+  background-color: transparent;
   outline: none; }
 
 .form input[type="reset"] {
@@ -787,6 +787,12 @@ input {
   .form-login input[name="phone-number"]:-ms-input-placeholder {
     color: #30353E; }
 
+.form-login {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: center; }
+
 .form-login .form__field-wrap {
   position: relative; }
   .form-login .form__field-wrap::before {
@@ -809,6 +815,7 @@ input {
     transform: rotate(-45deg); }
 
 .form-login__add-phone-button {
+  justify-self: start;
   margin: 0;
   padding: 0;
   text-decoration: underline;
@@ -819,6 +826,10 @@ input {
   background-color: transparent; }
 
 .form-login .form__login-block {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -862,20 +873,10 @@ input {
     margin-right: 20px; } }
 
 @media (min-width: 1366px) {
-  .form-login {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    align-items: center; }
-  .form-login .form__field-wrap {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: -1; }
-    .form-login .form__field-wrap::before {
-      display: none; }
-    .form-login .form__field-wrap::after {
-      display: none; }
+  .form-login .form__field-wrap::before {
+    display: none; }
+  .form-login .form__field-wrap::after {
+    display: none; }
   .form-login input[name="phone-number"] {
     /* Firefox 19+ */
     /* Firefox 18- */ }
@@ -888,10 +889,6 @@ input {
     .form-login input[name="phone-number"]:-ms-input-placeholder {
       color: #c4c4c4; }
   .form-login .form__login-block {
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: -1;
     margin-top: 41px;
     margin-bottom: 36px; }
   .form-login__btn-wrap {

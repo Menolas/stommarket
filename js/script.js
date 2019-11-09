@@ -7,7 +7,8 @@ var formSubmit = document.querySelector('.form-submit');
 var formSwitchButton = document.querySelector('.greeting .greeting__btn');
 var sliderElements = document.querySelectorAll('.slider__item');
 var formLoginButton = formLogin.querySelector('.form-login__btn');
-var phoneInput = formLogin.querySelector('input[name="phone-number"]');
+var phoneInput1 = formLogin.querySelector('input[name="phone-number-1"]');
+var phoneInput2 = formLogin.querySelector('input[name="phone-number-2"]');
 var nameInput = formSubmit.querySelector('input[name="name"]');
 var occupationInput = formSubmit.querySelector('input[name="occupation"]');
 var cityInput = formSubmit.querySelector('input[name="city"]');
@@ -45,20 +46,37 @@ addInputButton.addEventListener('click', function () {
 
 // валидация
 
-phoneInput.addEventListener('invalid', function () {
-  getBorder(phoneInput, RED_BORDER);
-  if (phoneInput.validity.patternMismatch) {
-    phoneInput.setCustomValidity('Номер телефона должен состоять из цифр');
-  } else if (phoneInput.validity.tooShort) {
-    phoneInput.setCustomValidity('Номер телефона должен состоять не менее, чем из 11 цифр');
-  } else if (phoneInput.validity.tooLong) {
-    phoneInput.setCustomValidity('Номер телефона должен состоять не более, чем из 11 цифр');
-  } else if (phoneInput.validity.valueMissing) {
-    phoneInput.setCustomValidity('Обязательное поле');
+phoneInput1.addEventListener('invalid', function () {
+  getBorder(phoneInput1, RED_BORDER);
+  if (phoneInput1.validity.patternMismatch) {
+    phoneInput1.setCustomValidity('Номер телефона должен состоять из цифр');
+  } else if (phoneInput1.validity.tooShort) {
+    phoneInput1.setCustomValidity('Номер телефона должен состоять не менее, чем из 11 цифр');
+  } else if (phoneInput1.validity.tooLong) {
+    phoneInput1.setCustomValidity('Номер телефона должен состоять не более, чем из 11 цифр');
+  } else if (phoneInput1.validity.valueMissing) {
+    phoneInput1.setCustomValidity('Обязательное поле');
   } else {
-    phoneInput.setCustomValidity('');
+    phoneInput1.setCustomValidity('');
   }
 });
+
+if (phoneInput2) {
+  phoneInput2.addEventListener('invalid', function () {
+    getBorder(phoneInput2, RED_BORDER);
+    if (phoneInput2.validity.patternMismatch) {
+      phoneInput2.setCustomValidity('Номер телефона должен состоять из цифр');
+    } else if (phoneInput2.validity.tooShort) {
+      phoneInput2.setCustomValidity('Номер телефона должен состоять не менее, чем из 11 цифр');
+    } else if (phoneInput2.validity.tooLong) {
+      phoneInput2.setCustomValidity('Номер телефона должен состоять не более, чем из 11 цифр');
+    } else if (phoneInput2.validity.valueMissing) {
+      phoneInput2.setCustomValidity('Обязательное поле');
+    } else {
+      phoneInput2.setCustomValidity('');
+    }
+  });
+};
 
 nameInput.addEventListener('invalid', function () {
   getBorder(nameInput, RED_BORDER);
@@ -99,8 +117,6 @@ cityInput.addEventListener('invalid', function () {
   }
 });
 
-/*
-
 formLogin.addEventListener('submit', function (evt) {
   if (!formLogin.checkValidity()) {
     return;
@@ -118,4 +134,4 @@ formSubmit.addEventListener('submit', function (evt) {
   if (!formSubmit.checkValidity()) {
     return;
   }
-});*/
+});
