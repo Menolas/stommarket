@@ -550,65 +550,7 @@ input {
   .main-footer__phone {
     font-size: 15px; } }
 
-.form-block__step {
-  display: none; }
-
-.form-block__title {
-  margin-bottom: 34px; }
-
-.form-block__button-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin-bottom: 62px;
-  width: 259px; }
-
-.form-block__button {
-  margin: 0;
-  padding: 0;
-  width: 112px;
-  height: 104px;
-  border: none;
-  border-radius: 6px;
-  font-size: 12px; }
-
-.form-block__button--school {
-  padding-top: 58px;
-  padding-bottom: 18px;
-  line-height: 14px;
-  color: #30353E;
-  background-color: #ffffff;
-  border: 2px solid #2C78F6;
-  background-image: url("../img/education-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center 19px; }
-
-.form-block__button--student {
-  padding-top: 65px;
-  padding-bottom: 20px;
-  background-color: #2C78F6;
-  line-height: 22px;
-  color: #ffffff;
-  background-image: url("../img/users-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4); }
-
 @media (min-width: 1024px) {
-  .form-block {
-    position: relative; }
-  .form-block__title {
-    text-align: left; }
-  .form-block__step {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 10px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #2C78F6;
-    text-transform: uppercase; }
   .form-block__button-wrap {
     justify-content: flex-start;
     margin-bottom: 34px;
@@ -617,8 +559,6 @@ input {
     margin-right: 45px; } }
 
 @media (min-width: 1366px) {
-  .form-block__title {
-    margin-bottom: 27px; }
   .form-block__step {
     font-size: 12px;
     line-height: 38px;
@@ -644,8 +584,6 @@ input {
     background-size: 44px 40px; } }
 
 @media (min-width: 1920px) {
-  .form-block__title {
-    margin-bottom: 117px; }
   .form-block__step {
     font-size: 14px; }
   .form-block__button-wrap {
@@ -696,6 +634,12 @@ input {
   font-family: "Montserrat";
   color: #c4c4c4; }
 
+.form__title {
+  margin-bottom: 34px; }
+
+.form__step {
+  display: none; }
+
 .form__field-wrap {
   display: flex;
   flex-direction: column;
@@ -726,6 +670,20 @@ input {
   display: none; }
 
 @media (min-width: 1024px) {
+  .form {
+    position: relative; }
+  .form__title {
+    text-align: left; }
+  .form__step {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #2C78F6;
+    text-transform: uppercase; }
   .form__btn-wrap {
     grid-column-start: 1;
     grid-column-end: 1;
@@ -742,6 +700,8 @@ input {
     color: #c4c4c4; } }
 
 @media (min-width: 1366px) {
+  .form__title {
+    margin-bottom: 27px; }
   .form label {
     margin-bottom: 8px;
     font-size: 12px;
@@ -763,6 +723,8 @@ input {
   /* Firefox 18- */
   :-ms-input-placeholder {
     font-size: 22px; }
+  .form-block__title {
+    margin-bottom: 117px; }
   .form label {
     margin-bottom: 27px;
     font-size: 14px; }
@@ -775,27 +737,63 @@ input {
     font-size: 12px;
     line-height: 19px; } }
 
-.form-login input[name="phone-number"] {
-  /* Firefox 19+ */
-  /* Firefox 18- */ }
-  .form-login input[name="phone-number"]::-webkit-input-placeholder {
-    color: #30353E; }
-  .form-login input[name="phone-number"]::-moz-placeholder {
-    color: #30353E; }
-  .form-login input[name="phone-number"]:-moz-placeholder {
-    color: #30353E; }
-  .form-login input[name="phone-number"]:-ms-input-placeholder {
-    color: #30353E; }
-
 .form-login {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   align-items: center; }
 
-.form-login .form__field-wrap {
+.form-login .form__field-wrap--radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 62px;
+  width: 259px; }
+
+.form-login input[type="radio"] {
+  display: none; }
+
+.form-login label[for="school-login"],
+.form-login label[for="student-login"] {
+  display: inline-block;
+  width: 112px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #30353E;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #2C78F6;
+  background-repeat: no-repeat; }
+
+.form-login label[for="school-login"] {
+  padding-top: 58px;
+  padding-bottom: 18px;
+  line-height: 14px;
+  background-image: url("../img/school-icon-blue.svg");
+  background-position: center 19px; }
+
+.form-login label[for="student-login"] {
+  padding-top: 65px;
+  padding-bottom: 20px;
+  line-height: 22px;
+  background-image: url("../img/students-icon-blue.svg");
+  background-position: center 20px; }
+
+.form-login input[type="radio"]:checked + label {
+  background-color: #2C78F6;
+  color: #ffffff;
+  box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4); }
+
+.form-login input[name="school-login"]:checked + label {
+  background-image: url("../img/school-icon-white.svg"); }
+
+.form-login input[name="student-login"]:checked + label {
+  background-image: url("../img/students-icon-white.svg"); }
+
+.form-login .form__field-wrap--phone {
   position: relative; }
-  .form-login .form__field-wrap::before {
+  .form-login .form__field-wrap--phone::before {
     content: "";
     position: absolute;
     bottom: 13px;
@@ -804,7 +802,7 @@ input {
     height: 2px;
     background-color: #45C781;
     transform: rotate(45deg); }
-  .form-login .form__field-wrap::after {
+  .form-login .form__field-wrap--phone::after {
     content: "";
     position: absolute;
     bottom: 15px;
@@ -826,10 +824,6 @@ input {
   background-color: transparent; }
 
 .form-login .form__login-block {
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -877,17 +871,6 @@ input {
     display: none; }
   .form-login .form__field-wrap::after {
     display: none; }
-  .form-login input[name="phone-number"] {
-    /* Firefox 19+ */
-    /* Firefox 18- */ }
-    .form-login input[name="phone-number"]::-webkit-input-placeholder {
-      color: #c4c4c4; }
-    .form-login input[name="phone-number"]::-moz-placeholder {
-      color: #c4c4c4; }
-    .form-login input[name="phone-number"]:-moz-placeholder {
-      color: #c4c4c4; }
-    .form-login input[name="phone-number"]:-ms-input-placeholder {
-      color: #c4c4c4; }
   .form-login .form__login-block {
     margin-top: 41px;
     margin-bottom: 36px; }

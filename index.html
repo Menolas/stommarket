@@ -48,63 +48,62 @@
 			            </div>
 			    	</li>
                     <li class="slider__item  slider__item--login">
-					    <div class="form-block">
-							<h2 class="form-block__title  title__secondary">Личные данные</h2>
-							<span class="form-block__step"><pre>шаг 1/2</pre></span>
-							<div class="form-block__button-wrap">
-								<button class="form-block__button  form-block__button--school">Обучающий центр</button>
-								<button class="form-block__button  form-block__button--student">Слушатель</button>
-						    </div>
-							<form class="form  form-login" method="#" action="#">
-								<div class="form__field-wrap">
-									<label for="phone-number-1">Телефон<sup>*</sup></label>
-									<input type="text" name="phone-number-1" id="phone-number-1" placeholder="+7 (___) ___-__-__" min="11" max="11">
-								</div>
-								<button class="form-login__add-phone-button">+ добавить еще один номер</button>
-								<div class="form__login-block">
-									<p>войти с помощью:</p>
-									<button>Стоммаркет</button>
-								</div>
-								<div class="form__btn-wrap">
-									<p class="form__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
-									<input class="form-login__btn  btn" type="submit" value="Далее">
-								</div>
-							</form>
-						</div>
+					    <form class="form  form-login" method="#" action="#">
+						<h2 class="form__title  title__secondary">Личные данные</h2>
+						<span class="form__step"><pre>шаг 1/2</pre></span>
+						<div class="form__field-wrap  form__field-wrap--radio-buttons">
+							<label for="school-login">Обучающий центр</label>
+							<input type="radio" name="school-login" id="school-login">
+							<label for="student-login">Слушатель</label>
+							<input type="radio" name="student-login" id="student-login" checked>
+					    </div>
+						
+							<div class="form__field-wrap  form__field-wrap--phone">
+								<label for="phone-number-1">Телефон<sup>*</sup></label>
+								<input type="text" name="phone-number-1" id="phone-number-1" placeholder="+7 (___) ___-__-__" min="11" max="11">
+							</div>
+							<button class="form-login__add-phone-button">+ добавить еще один номер</button>
+							<div class="form__login-block">
+								<p>войти с помощью:</p>
+								<button>Стоммаркет</button>
+							</div>
+							<div class="form__btn-wrap">
+								<p class="form__comment">Вы сможете отредактировать данную информацию позднее в своем личном кабинете</p>
+								<input class="form-login__btn  btn" type="submit" value="Далее">
+							</div>
+						</form>
 					</li>
 					<li class="slider__item  slider__item--submit">
-						<div class="form-block">
-							<h2 class="form-block__title  slider__item-title title__secondary">Основная информация
+						<form class="form  form-submit" method="#">
+							<h2 class="form__title  slider__item-title title__secondary">Основная информация
 							</h2>
-							<span class="form-block__step"><pre>шаг 2/2</pre></span>
-							<form class="form  form-submit" method="#">
-								<div class="form__field-wrap  form__field-wrap--file">
-									<label for="file">Загрузить фото</label>
-									<input type="file" name="file" id="file">
-									<div class="form__input-file-comment">
-										<p>Вы можете загрузить фото<br> в формате .jpg, .png</p>
-										<p>Допустимый объём файла 5 мб</p>
-									</div>
+							<span class="form__step"><pre>шаг 2/2</pre></span>
+							<div class="form__field-wrap  form__field-wrap--file">
+								<label for="file">Загрузить фото</label>
+								<input type="file" name="file" id="file">
+								<div class="form__input-file-comment">
+									<p>Вы можете загрузить фото<br> в формате .jpg, .png</p>
+									<p>Допустимый объём файла 5 мб</p>
 								</div>
-								<div class="form__field-wrap  form__field-wrap--name">
-									<label for="name">ФИО<sup>*</sup></label>
-									<input type="text" name="name" id="name" placeholder="Пупкин Владимир Владимирович" required pattern="[A-Za-z]" min="2">
+							</div>
+							<div class="form__field-wrap  form__field-wrap--name">
+								<label for="name">ФИО<sup>*</sup></label>
+								<input type="text" name="name" id="name" placeholder="Пупкин Владимир Владимирович" required pattern="[A-Za-z]" min="2">
+							</div>
+							<div class="form__field-wrap  form__field-wrap--occupation">
+								<label for="occupation">Должность<sup>*</sup></label>
+								<input type="text" name="occupation" id="occupation" placeholder="Стоматолог" required pattern="[A-Za-z]" min="2">
+							</div>
+							<div class="form__field-wrap  form__field-wrap--city">
+								<label for="city">Город<sup>*</sup></label>
+								<input type="text" name="city" id="city" placeholder="Санкт-Петербург" required pattern="[A-Za-z]" min="2">
+							</div>
+							<div class="form__btn-wrap">
+								<p class="form__comment">Вы cможете отредактировать данную информацию позднее в своем личном кабинете</p>
+								<input class="btn" type="reset" name="reset" value="Назад">
+								<input class="btn" type="submit" name="next" value="Регистрация">
 								</div>
-								<div class="form__field-wrap  form__field-wrap--occupation">
-									<label for="occupation">Должность<sup>*</sup></label>
-									<input type="text" name="occupation" id="occupation" placeholder="Стоматолог" required pattern="[A-Za-z]" min="2">
-								</div>
-								<div class="form__field-wrap  form__field-wrap--city">
-									<label for="city">Город<sup>*</sup></label>
-									<input type="text" name="city" id="city" placeholder="Санкт-Петербург" required pattern="[A-Za-z]" min="2">
-								</div>
-								<div class="form__btn-wrap">
-									<p class="form__comment">Вы cможете отредактировать данную информацию позднее в своем личном кабинете</p>
-									<input class="btn" type="reset" name="reset" value="Назад">
-									<input class="btn" type="submit" name="next" value="Регистрация">
-								</div>
-							</form>
-						</div>
+						</form>
 					</li>
 				</ul>
 			</div>
