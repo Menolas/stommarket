@@ -550,56 +550,6 @@ input {
   .main-footer__phone {
     font-size: 15px; } }
 
-@media (min-width: 1024px) {
-  .form-block__button-wrap {
-    justify-content: flex-start;
-    margin-bottom: 34px;
-    width: 100%; }
-  .form-block__button {
-    margin-right: 45px; } }
-
-@media (min-width: 1366px) {
-  .form-block__step {
-    font-size: 12px;
-    line-height: 38px;
-    letter-spacing: 2px; }
-  .form-block__step pre {
-    margin: 0;
-    font-family: "Montserrat"; }
-  .form-block__button-wrap {
-    margin-bottom: 44px; }
-  .form-block__button {
-    margin-right: 59px;
-    padding-top: 78px;
-    width: 200px;
-    height: 142px;
-    font-size: 14px;
-    line-height: 22px;
-    background-position: center 32px; }
-    .form-block__button:last-of-type {
-      margin-right: 0; }
-  .form-block__button--school {
-    background-size: 40px 40px; }
-  .form-block__button--student {
-    background-size: 44px 40px; } }
-
-@media (min-width: 1920px) {
-  .form-block__step {
-    font-size: 14px; }
-  .form-block__button-wrap {
-    margin-bottom: 70px; }
-  .form-block__button {
-    margin-right: 64px;
-    padding-top: 95px;
-    width: 245px;
-    height: 200px;
-    font-size: 18px;
-    background-position: center 47px; }
-  .form-block__button--school {
-    background-size: 60px 60px; }
-  .form-block__button--student {
-    background-size: 66px 60px; } }
-
 ::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 22px;
@@ -660,7 +610,7 @@ input {
   background-color: transparent;
   outline: none; }
 
-.form input[type="reset"] {
+.form__btn-wrap button {
   display: none; }
 
 .form input[type="submit"] {
@@ -685,10 +635,6 @@ input {
     color: #2C78F6;
     text-transform: uppercase; }
   .form__btn-wrap {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -702,6 +648,10 @@ input {
 @media (min-width: 1366px) {
   .form__title {
     margin-bottom: 27px; }
+  .form__step {
+    font-size: 12px;
+    line-height: 38px;
+    letter-spacing: 2px; }
   .form label {
     margin-bottom: 8px;
     font-size: 12px;
@@ -709,8 +659,10 @@ input {
   .form input:not(.btn) {
     padding-bottom: 9px;
     padding-top: 6px; }
-  .form input[type="reset"] {
-    display: block; } }
+  .form__btn-wrap button {
+    display: block;
+    margin-right: 19px;
+    margin-left: auto; } }
 
 @media (min-width: 1920px) {
   ::-webkit-input-placeholder {
@@ -723,7 +675,7 @@ input {
   /* Firefox 18- */
   :-ms-input-placeholder {
     font-size: 22px; }
-  .form-block__title {
+  .form__title {
     margin-bottom: 117px; }
   .form label {
     margin-bottom: 27px;
@@ -751,12 +703,10 @@ input {
   margin-bottom: 62px;
   width: 259px; }
 
-.form-login input[type="radio"] {
-  display: none; }
-
-.form-login label[for="school-login"],
-.form-login label[for="student-login"] {
+.form-login label[for="school"],
+.form-login label[for="student"] {
   display: inline-block;
+  margin-bottom: 0;
   width: 112px;
   border-radius: 6px;
   font-size: 12px;
@@ -766,30 +716,34 @@ input {
   border: 2px solid #2C78F6;
   background-repeat: no-repeat; }
 
-.form-login label[for="school-login"] {
+.form-login label[for="school"] {
   padding-top: 58px;
   padding-bottom: 18px;
   line-height: 14px;
   background-image: url("../img/school-icon-blue.svg");
   background-position: center 19px; }
 
-.form-login label[for="student-login"] {
+.form-login label[for="student"] {
   padding-top: 65px;
   padding-bottom: 20px;
   line-height: 22px;
   background-image: url("../img/students-icon-blue.svg");
   background-position: center 20px; }
 
-.form-login input[type="radio"]:checked + label {
+.form-login input[value="school"]:checked + label {
   background-color: #2C78F6;
   color: #ffffff;
+  background-image: url("../img/school-icon-white.svg");
   box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4); }
 
-.form-login input[name="school-login"]:checked + label {
-  background-image: url("../img/school-icon-white.svg"); }
+.form-login input[value="student"]:checked + label {
+  background-color: #2C78F6;
+  color: #ffffff;
+  background-image: url("../img/students-icon-white.svg");
+  box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4); }
 
-.form-login input[name="student-login"]:checked + label {
-  background-image: url("../img/students-icon-white.svg"); }
+.form-login input[type="radio"] {
+  display: none; }
 
 .form-login .form__field-wrap--phone {
   position: relative; }
@@ -815,6 +769,7 @@ input {
 .form-login__add-phone-button {
   justify-self: start;
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
   text-decoration: underline;
   color: #2C78F6;
@@ -827,7 +782,6 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 27px;
   margin-bottom: 122px;
   padding-left: 5px;
   color: #61656B; }
@@ -860,6 +814,12 @@ input {
     box-shadow: 0 0 17px rgba(0, 0, 0, 0.1); }
 
 @media (min-width: 1024px) {
+  .form-login .form__field-wrap--radio-buttons {
+    justify-content: flex-start;
+    margin-bottom: 34px;
+    width: 100%; }
+  .form-login label[for="school"] {
+    margin-right: 45px; }
   .form-login .form__login-block {
     justify-content: flex-start;
     margin-bottom: 100px; }
@@ -867,12 +827,25 @@ input {
     margin-right: 20px; } }
 
 @media (min-width: 1366px) {
-  .form-login .form__field-wrap::before {
-    display: none; }
-  .form-login .form__field-wrap::after {
-    display: none; }
+  .form-login .form__field-wrap--radio-buttons {
+    margin-bottom: 44px; }
+  .form-login label[for="school"],
+  .form-login label[for="student"] {
+    padding-top: 78px;
+    padding-bottom: 20px;
+    width: 200px;
+    height: 102px;
+    font-size: 14px;
+    line-height: 22px;
+    background-position: center 32px; }
+  .form-login label[for="school"] {
+    margin-right: 59px;
+    background-size: 40px 40px; }
+  .form-login label[for="student"] {
+    background-size: 44px 40px; }
+  .form-login__add-phone-button {
+    margin-bottom: 41px; }
   .form-login .form__login-block {
-    margin-top: 41px;
     margin-bottom: 36px; }
   .form-login__btn-wrap {
     display: flex;
@@ -880,8 +853,25 @@ input {
     align-items: center; } }
 
 @media (min-width: 1920px) {
+  .form__step {
+    font-size: 14px; }
+  .form-login .form__field-wrap--radio-buttons {
+    margin-bottom: 70px; }
+  .form-login label[for="school"],
+  .form-login label[for="student"] {
+    padding-top: 135px;
+    width: 245px;
+    height: 90px;
+    font-size: 18px;
+    background-position: center 55px; }
+  .form-login label[for="school"] {
+    margin-right: 64px;
+    background-size: 60px 60px; }
+  .form-login label[for="student"] {
+    background-size: 66px 60px; }
+  .form-login__add-phone-button {
+    margin-bottom: 25px; }
   .form-login .form__login-block {
-    margin-top: 25px;
     margin-bottom: 43px; }
   .form-login .form__login-block p {
     margin-right: 30px;
@@ -981,9 +971,6 @@ input {
     grid-row-start: 4;
     grid-row-end: 4;
     margin-bottom: 42px; }
-  .form-submit .btn[type="reset"] {
-    margin-right: 19px;
-    margin-left: auto; }
   .form-submit .btn[type="submit"] {
     margin: 0; } }
 

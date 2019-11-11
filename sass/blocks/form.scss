@@ -49,7 +49,7 @@
 	outline: none;
 }
 
-.form input[type="reset"] {
+.form__btn-wrap button {
 	display: none;
 }
 
@@ -83,10 +83,6 @@
   }
 
 	.form__btn-wrap {
-  	grid-column-start: 1;
-  	grid-column-end: 1;
-  	grid-row-start: 5;
-  	grid-row-end: 5;
   	display: flex;
   	justify-content: space-between;
   	align-items: center;
@@ -106,6 +102,12 @@
 		margin-bottom: 27px;
 	}
 
+	.form__step {
+  	font-size: 12px;
+  	line-height: 38px;
+    letter-spacing: 2px;
+  }
+
 	.form label {
 		margin-bottom: 8px;
 		font-size: 12px;
@@ -117,8 +119,10 @@
 		padding-top: 6px;
 	}
 
-  .form input[type="reset"] {
-	  display: block;
+  .form__btn-wrap button {
+  	display: block;
+  	margin-right: 19px;
+  	margin-left: auto;
   }
 }
 
@@ -139,7 +143,7 @@
 	  font-size: 22px;
 	}
 
-	.form-block__title {
+	.form__title {
 		margin-bottom: 117px;
 	}
 

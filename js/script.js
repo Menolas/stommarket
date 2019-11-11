@@ -14,6 +14,7 @@ var occupationInput = formSubmit.querySelector('input[name="occupation"]');
 var cityInput = formSubmit.querySelector('input[name="city"]');
 var addInputButton = formLogin.querySelector('.form-login__add-phone-button');
 var formLoginBlock = formLogin.querySelector('.form__login-block');
+var goBackButton = formSubmit.querySelector('.form__btn-wrap button');
 var RED_BORDER = '1px solid red';
 
 var getBorder = function (input, borderStyle) {
@@ -70,8 +71,6 @@ if (phoneInput2) {
       phoneInput2.setCustomValidity('Номер телефона должен состоять не менее, чем из 11 цифр');
     } else if (phoneInput2.validity.tooLong) {
       phoneInput2.setCustomValidity('Номер телефона должен состоять не более, чем из 11 цифр');
-    } else if (phoneInput2.validity.valueMissing) {
-      phoneInput2.setCustomValidity('Обязательное поле');
     } else {
       phoneInput2.setCustomValidity('');
     }
@@ -82,8 +81,6 @@ nameInput.addEventListener('invalid', function () {
   getBorder(nameInput, RED_BORDER);
   if (nameInput.validity.patternMismatch) {
     nameInput.setCustomValidity('Ваше имя должно состоять из букв');
-  } else if (nameInput.validity.tooShort) {
-    nameInput.setCustomValidity('Ваше имя должно быть не короче, чем из двух букв');
   } else if (nameInput.validity.valueMissing) {
     nameInput.setCustomValidity('Обязательное поле');
   } else {
@@ -95,8 +92,6 @@ occupationInput.addEventListener('invalid', function () {
   getBorder(occupationInput, RED_BORDER);
   if (occupationInput.validity.patternMismatch) {
     occupationInput.setCustomValidity('Название вашей должности должно состоять из букв');
-  } else if (occupationInput.validity.tooShort) {
-    occupationInput.setCustomValidity('Название вашей должности должно быть не короче, чем из двух букв');
   } else if (occupationInput.validity.valueMissing) {
     occupationInput.setCustomValidity('Обязательное поле');
   } else {
@@ -108,8 +103,6 @@ cityInput.addEventListener('invalid', function () {
   getBorder(cityInput, RED_BORDER);
   if (cityInput.validity.patternMismatch) {
     cityInput.setCustomValidity('Название вашего города должно состоять из букв');
-  } else if (cityInput.validity.tooShort) {
-    cityInput.setCustomValidity('Название вашего города должно состоять не менее, чем из двух букв');
   } else if (cityInput.validity.valueMissing) {
     cityInput.setCustomValidity('Обязательное поле');
   } else {
@@ -121,17 +114,27 @@ formLogin.addEventListener('submit', function (evt) {
   if (!formLogin.checkValidity()) {
     return;
   }
-
+  if (formLogin.checkValidity()) {
   sliderElements[1].classList.remove('slider__item--shown');
   sliderElements[1].classList.add('slider__item--closed');
   sliderElements[2].classList.add('slider__item--shown');
 
   paginatorMarkers[2].classList.add('slider-paginator__item--active');
   paginatorMarkers[1].classList.remove('slider-paginator__item--active');
+  }
+  evt.preventDefault();
+});
+
+goBackButton.addEventListener('click', function () {
+  sliderElements[2].classList.remove('slider__item--shown');
+  sliderElements[2].classList.add('slider__item--closed');
+  sliderElements[1].classList.remove('slider__item--closed');
+  sliderElements[1].classList.add('slider__item--shown');
 });
 
 formSubmit.addEventListener('submit', function (evt) {
   if (!formSubmit.checkValidity()) {
     return;
   }
+  evt.preventDefault();
 });

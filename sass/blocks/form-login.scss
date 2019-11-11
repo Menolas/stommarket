@@ -14,13 +14,10 @@
 	width: 259px;
 }
 
-.form-login input[type="radio"] {
-	display: none;
-}
-
-.form-login label[for="school-login"],
-.form-login label[for="student-login"] {
+.form-login label[for="school"],
+.form-login label[for="student"] {
 	display: inline-block;
+	margin-bottom: 0;
 	width: 112px;
 	border-radius: 6px;
 	font-size: 12px;
@@ -31,7 +28,7 @@
 	background-repeat: no-repeat;
 }
 
-.form-login label[for="school-login"] {
+.form-login label[for="school"] {
   padding-top: 58px;
 	padding-bottom: 18px;
 	line-height: 14px;
@@ -39,7 +36,7 @@
 	background-position: center 19px;
 }
 
-.form-login label[for="student-login"] {
+.form-login label[for="student"] {
   padding-top: 65px;
 	padding-bottom: 20px;
 	line-height: 22px;
@@ -47,18 +44,22 @@
 	background-position: center 20px;
 }
 
-.form-login input[type="radio"]:checked + label {
+.form-login input[value="school"]:checked + label {
 	background-color: $blue;
 	color: $white;
+	background-image: url("../img/school-icon-white.svg");
 	box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4);
 }
 
-.form-login input[name="school-login"]:checked + label {
-	background-image: url("../img/school-icon-white.svg");
+.form-login input[value="student"]:checked + label {
+	background-color: $blue;
+	color: $white;
+	background-image: url("../img/students-icon-white.svg");
+	box-shadow: 0 20px 54px rgba(0, 83, 221, 0.4);
 }
 
-.form-login input[name="student-login"]:checked + label {
-	background-image: url("../img/students-icon-white.svg");
+.form-login input[type="radio"] {
+	display: none;
 }
 
 .form-login .form__field-wrap--phone {
@@ -90,6 +91,7 @@
 .form-login__add-phone-button {
 	justify-self: start;
 	margin: 0;
+	margin-bottom: 26px;
 	padding: 0;
 	text-decoration: underline;
 	color: $blue;
@@ -103,7 +105,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 27px;
 	margin-bottom: 122px;
 	padding-left: 5px;
 	color: $middle-gray;
@@ -140,6 +141,16 @@
 }
 
 @media (min-width: 1024px) {
+	.form-login .form__field-wrap--radio-buttons {
+  	justify-content: flex-start;
+  	margin-bottom: 34px;
+  	width: 100%;
+  }
+
+  .form-login label[for="school"] {
+  	margin-right: 45px;
+  }
+
   .form-login .form__login-block {
   	justify-content: flex-start;
   	margin-bottom: 100px;
@@ -151,19 +162,35 @@
 }
 
 @media (min-width: 1366px) {
-	.form-login .form__field-wrap {
+	.form-login .form__field-wrap--radio-buttons {
+  	margin-bottom: 44px;
+  }
 
-		&::before {
-			display: none;
-		}
+  .form-login label[for="school"],
+  .form-login label[for="student"] {
+  	padding-top: 78px;
+  	padding-bottom: 20px;
+  	width: 200px;
+  	height: 102px;
+  	font-size: 14px;
+  	line-height: 22px;
+  	background-position: center 32px;
+  }
 
-		&::after {
-			display: none;
-	  }
+  .form-login label[for="school"] {
+  	margin-right: 59px;
+  	background-size: 40px 40px;
+  }
+
+  .form-login label[for="student"] {
+  	background-size: 44px 40px;
+  }
+
+	.form-login__add-phone-button {
+		margin-bottom: 41px;
 	}
 
   .form-login .form__login-block {
-  	margin-top: 41px;
   	margin-bottom: 36px;
   }
 
@@ -175,8 +202,37 @@
 }
 
 @media (min-width: 1920px) {
+	.form__step {
+		font-size: 14px;
+	}
+
+	.form-login .form__field-wrap--radio-buttons {
+		margin-bottom: 70px;
+	}
+
+	.form-login label[for="school"],
+  .form-login label[for="student"] {
+		padding-top: 135px;
+		width: 245px;
+		height: 90px;
+		font-size: 18px;
+		background-position: center 55px;
+	}
+
+	.form-login label[for="school"] {
+		margin-right: 64px;
+  	background-size: 60px 60px;
+  }
+
+  .form-login label[for="student"] {
+  	background-size: 66px 60px;
+  }
+
+	.form-login__add-phone-button {
+		margin-bottom: 25px;
+	}
+
 	.form-login .form__login-block {
-  	margin-top: 25px;
   	margin-bottom: 43px;
   }
 
