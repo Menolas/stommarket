@@ -118,6 +118,9 @@ formLogin.addEventListener('submit', function (evt) {
   sliderElements[1].classList.remove('slider__item--shown');
   sliderElements[1].classList.add('slider__item--closed');
   sliderElements[2].classList.add('slider__item--shown');
+  if (sliderElements[2].classList.contains('slider__item--closed')) {
+    sliderElements[2].classList.remove('slider__item--closed');
+  }
 
   paginatorMarkers[2].classList.add('slider-paginator__item--active');
   paginatorMarkers[1].classList.remove('slider-paginator__item--active');
