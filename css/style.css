@@ -831,18 +831,18 @@ input {
     margin-bottom: 44px; }
   .form-login label[for="school"],
   .form-login label[for="student"] {
-    padding-top: 78px;
+    padding-top: 100px;
     padding-bottom: 20px;
     width: 200px;
-    height: 102px;
+    height: 80px;
     font-size: 14px;
     line-height: 22px;
-    background-position: center 32px; }
+    background-position: center 40px; }
   .form-login label[for="school"] {
     margin-right: 59px;
-    background-size: 40px 40px; }
+    background-size: 50px 50px; }
   .form-login label[for="student"] {
-    background-size: 44px 40px; }
+    background-size: 55px 50px; }
   .form-login__add-phone-button {
     margin-bottom: 41px; }
   .form-login .form__login-block {
